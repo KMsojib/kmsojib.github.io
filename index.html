@@ -478,7 +478,43 @@
     <div class="max-w-4xl mx-auto text-center">
         <h2 class="relative z-10 text-3xl font-bold section-title text-gray-900 px-6 py-2">Projects</h2>
         <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            
+             <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
+            hover:shadow-xl hover:border-blue-500 hover:scale-[1.02] 
+            transition-all duration-300 flex flex-col h-full">
+
+        <div class="flex items-start mb-4">
+        <div class="p-3 bg-blue-100 rounded-lg mr-4">
+            <i class="fas fa-brain text-blue-600 text-xl"></i>
+        </div>
+        <!-- Project: MedRecon-ARU: MRI & CT Image Reconstruction -->
+        <div class="text-left">
+            <h3 class="text-xl font-bold text-gray-800">MedRecon-ARU: MRI & CT Image Reconstruction</h3>
+            <p class="text-sm text-gray-500">Deep Learning · Attention Residual U-Net</p>
+        </div>
+    </div>
+
+    <div class="flex-1 text-left space-y-2 text-gray-600 text-sm">
+        <p>• Developed <strong>MedRecon-ARU</strong>, an Attention Residual U-Net architecture for medical image reconstruction.</p>
+        <p>• Added <strong>0.5% simulated technical noise</strong> to MRI & CT images to mimic real-world acquisition artifacts.</p>
+        <p>• Achieved high reconstruction performance on Brain MRI and CT datasets using <strong>PSNR</strong> and <strong>SSIM</strong> metrics.</p>
+        <p>• Included training curves, validation loss trends, and side-by-side reconstructed outputs.</p>
+        <p>• Model designed with attention gates + residual blocks for improved structural recovery.</p>
+    </div>
+
+    <div class="mt-5 space-x-3">
+        <a href="https://github.com/KMsojib/MedRecon-ARU-Attention-Residual-U-Net-for-MRI-CT-Image-Reconstruction" 
+        target="_blank" 
+        class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
+            <i class="fab fa-github mr-2"></i> View on GitHub
+            <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+        </a>
+
+        <a href="https://drive.google.com/file/d/19XqFRotvV-gwDr0AYzxI388YTIHjqEcq/view" target="_blank" 
+        class="inline-flex items-center text-red-600 font-medium hover:text-red-800 transition">
+            <i class="fas fa-file-pdf mr-2"></i> Report
+        </a>
+    </div>
+</div>
             <!-- Project 1 -->
             <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
                         hover:shadow-xl hover:border-blue-500 hover:scale-[1.02] 
@@ -530,9 +566,8 @@
                     <i class="fas fa-external-link-alt ml-1 text-xs"></i>
                 </a>
             </div>
+            
 
-        </div>
-    </div>
 </section>
 
 <!-- Research Interest -->
