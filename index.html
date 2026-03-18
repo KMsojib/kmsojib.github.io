@@ -57,9 +57,9 @@
     <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <a href="#" class="text-2xl font-bold text-gray-200">Kawsar portfolio</a>
         <div class="space-x-4">
-            <a href="#cp-profile" class="text-gray-200 hover:text-blue-400 transition-colors">CP Profile</a>
+            <a href="#cp" class="text-gray-200 hover:text-blue-400 transition-colors">CP</a>
             <a href="#achievements" class="text-gray-200 hover:text-blue-400 transition-colors">Achievements</a>
-            <a href="#work-in-progress" class="text-gray-200 hover:text-blue-400 transition-colors">Work in Progress</a>
+            <a href="#thesis" class="text-gray-200 hover:text-blue-400 transition-colors">Thesis</a>
             <a href="#projects" class="text-gray-200 hover:text-blue-400 transition-colors">Projects</a>
             <!-- NAVIGATION (inside <header>) -->
             <a href="#research-interest" class="text-gray-200 hover:text-blue-400 transition-colors">Research Interest</a>
@@ -159,7 +159,7 @@
     </style>
 
 <!-- 1. CP Profile -->
-<section id="cp-profile" class="py-16 px-4 md:py-24 bg-gray-50">
+<section id="cp" class="py-16 px-4 md:py-24 bg-gray-50">
     <div class="container mx-auto">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-bold section-title">Competitive Programming Profile</h2>
@@ -444,12 +444,10 @@
     </div>
 </section>
 
-<!-- 3. Work in Progress -->
-<section id="work-in-progress" class="py-16 px-4 md:py-24 container mx-auto">
+<!-- 3. Thesis -->
+<section id="thesis" class="py-16 px-4 md:py-24 container mx-auto">
     <div class="max-w-4xl mx-auto text-center">
-        <h2 class="relative z-10 text-3xl font-bold section-title text-gray-900 px-6 py-2">
-            Work in Progress
-        </h2>
+        <h2 class="relative z-10 text-3xl font-bold section-title text-gray-900 px-6 py-2">Thesis</h2>
         
         <div class="mt-12 max-w-3xl mx-auto">
             <!-- Thesis Card -->
@@ -463,7 +461,7 @@
                     </div>
                     <div class="text-left flex-1">
                         <h3 class="text-2xl font-bold text-gray-800 leading-tight">
-                            Robust Encoder-Decoder Based Image Reconstruction Towards Efficient Downstream Tasks
+                            ARU-NET: Encoder-Decoder Based Image Reconstruction Towards Efficient Downstream Tasks
                         </h3>
                         <p class="text-sm text-purple-600 font-medium mt-1">
                             Undergraduate Thesis • Medical Imaging & Deep Learning
@@ -484,7 +482,7 @@
 </section>
 
 
-    <!-- 4. Projects -->
+<!-- 4. Projects -->
 <section id="projects" class="py-16 px-4 md:py-24 container mx-auto">
     <div class="max-w-4xl mx-auto text-center">
         <h2 class="relative z-10 text-3xl font-bold section-title text-gray-900 px-6 py-2">Projects</h2>
@@ -629,25 +627,27 @@
                 </div>
 
                 <div class="text-left text-gray-700 text-base leading-relaxed">
-                    <p>
-                        My research interests are centered on the integration of 
-                        <strong>Machine Learning</strong>, <strong>Deep Learning</strong>, and 
-                        <strong>Computer Vision</strong>, with a strong emphasis on developing 
-                        robust and interpretable models for visual understanding.
-                    </p>
-                    <p class="mt-4">
-                        I am particularly interested in <strong>image enhancement and reconstruction</strong> 
-                        techniques that improve feature quality and representation learning in degraded or 
-                        resource-constrained environments.
-                    </p>
-                    <p class="mt-4">
-                        My current focus includes applying these methods to <strong>automated disease detection</strong> 
-                        in both <strong>medical imaging</strong> and <strong>agricultural vision systems</strong>, 
-                        where noise, blur, and low-resolution inputs significantly affect model performance. 
-                        Through this work, I aim to design intelligent systems that are accurate, reliable, 
-                        and deployable in real-world low-resource settings.
-                    </p>
-                </div>
+                <p>
+                    My research interests lie at the intersection of 
+                    <strong>Computer Vision</strong> and <strong>Deep Learning</strong>, 
+                    with a core focus on <strong>image reconstruction</strong> — recovering 
+                    high-quality visual information from degraded, noisy, or low-resolution inputs.
+                </p>
+                <p class="mt-4">
+                    Within this domain, I am particularly drawn to <strong>medical imaging</strong> 
+                    and <strong>medical image reconstruction</strong>, where faithful image recovery 
+                    is critical for downstream clinical tasks such as lesion detection, segmentation, 
+                    and diagnosis. I am interested in designing deep architectures — including 
+                    attention-based encoder-decoder networks — that reconstruct clinically reliable 
+                    images under real-world degradation conditions.
+                </p>
+                <p class="mt-4">
+                    More broadly, I explore how reconstruction-driven representation learning can 
+                    improve the robustness of vision models operating in <strong>resource-constrained 
+                    or low-quality imaging environments</strong>, with applications spanning both 
+                    medical and agricultural visual systems.
+                </p>
+            </div>
             </div>
         </div>
     </div>
@@ -673,14 +673,14 @@
                         <i class="fas fa-graduation-cap text-blue-600 text-2xl"></i>
                     </div>
                     <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">
-                        Ongoing
+                        Completed
                     </span>
                 </div>
                 <h3 class="text-xl font-bold text-gray-800">B.Sc. in Computer Science & Engineering</h3>
                 <p class="text-sm font-medium text-gray-600 mt-1">Feni University</p>
                 <div class="mt-4 space-y-2 text-sm text-gray-600">
                     <p><strong>CGPA: 3.83 / 4.00</strong> (96.25%)</p>
-                    <p>01/2022 – Present</p>
+                    <p>01/2022 – 03/2026</p>
                 </div>
                 <div class="mt-4 flex items-center text-xs text-blue-600 font-medium">
                     <i class="fas fa-map-marker-alt mr-1"></i> Feni, Bangladesh
@@ -1007,7 +1007,7 @@
                             rounded-xl h-72 overflow-hidden">
 
                     <iframe 
-                        src="https://drive.google.com/file/d/1yIaJZbL16hxukV6GrwX7QYf3pHwteSdS/preview" 
+                        src="https://drive.google.com/file/d/1EirGNJ2Uxq6kveNqyjhzttgZpRAnLiVq/preview" 
                         class="w-full h-full border-0"
                         allow="autoplay"
                         loading="lazy">
@@ -1023,7 +1023,7 @@
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
 
                     <!-- Download Button -->
-                    <a href="https://drive.google.com/uc?export=download&id=1yIaJZbL16hxukV6GrwX7QYf3pHwteSdS" 
+                    <a href="https://drive.google.com/uc?export=download&id=1EirGNJ2Uxq6kveNqyjhzttgZpRAnLiVq" 
                        target="_blank"
                        class="inline-flex items-center justify-center px-6 py-3 
                               bg-gradient-to-r from-blue-600 to-indigo-600 text-white 
@@ -1035,7 +1035,7 @@
                     </a>
 
                     <!-- View Online Button -->
-                    <a href="https://drive.google.com/file/d/1yIaJZbL16hxukV6GrwX7QYf3pHwteSdS/view" 
+                    <a href="https://drive.google.com/file/d/1EirGNJ2Uxq6kveNqyjhzttgZpRAnLiVq/view" 
                        target="_blank"
                        class="inline-flex items-center justify-center px-6 py-3 
                               bg-white text-blue-600 border-2 border-blue-600 
@@ -1055,7 +1055,7 @@
                     </div>
                     <div>
                         <p class="font-bold text-gray-800">Updated</p>
-                        <p class="text-xs">Feb 2026</p>
+                        <p class="text-xs">Mar 2026</p>
                     </div>
                     <div>
                         <p class="font-bold text-gray-800">ATS</p>
