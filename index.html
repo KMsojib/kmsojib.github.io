@@ -1,1197 +1,419 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MD.Kawsar Mahmud - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #e7ebec;
-            color: #1f2937;
-        }
-        .section-title {
-            position: relative;
-            display: inline-block;
-            padding-bottom: 0.5rem;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 70%;
-            height: 2px;
-            background-color: #3b82f6;
-            transform: scaleX(0);
-            transition: transform 0.3s ease-in-out;
-        }
-        .section-title:hover::after {
-            transform: scaleX(1);
-        }
-        .card {
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-        }
-        .toggle-content-btn {
-            color: #3b82f6;
-            transition: color 0.2s ease-in-out;
-        }
-        .toggle-content-btn:hover {
-            text-decoration: underline;
-        }
-        .content-box {
-            display: none;
-        }
-    </style>
-</head>
-<body class="antialiased text-gray-800">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noodp" />
+    <title>Md-Kawsar Mahmud</title>
+    <link rel="shortcut icon" href="images/txst-logo-vertical.png" />
+    <link rel="canonical" href="https://kmsojib.io/" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <meta property="og:title" content="Md Kawsar Mahmud" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kmsojib.io/" />
+    <meta property="og:site_name" content="Md Kawsar Mahmud" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <nav class="menu">
+          <ul class="menu__inner menu__inner--desktop">
+            <li><a href="#about" class="active">About</a></li>
+            <li><a href="#Experience">Experience</a></li>
+            <li><a href="#Research">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#Achievements">Achievements</a></li>
+            <li><a href="#Cp-Profile">Cp-Profile</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#Extracurricular activities">Extracurriculars</a></li>
+          </ul>
+          <ul class="menu__inner menu__inner--mobile">
+            <li><a href="#about" class="active">About</a></li>
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#Research">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#Achievements">Achievements</a></li>
+            <li><a href="Cp-Profile">Cp-Profile</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#Extracurricular activities">Extracurriculars</a></li>
+          </ul>
+        </nav>
 
-   <header class="bg-gray-800 shadow-md sticky top-0 z-50">
-    <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <a href="#" class="text-2xl font-bold text-gray-200">Home</a>
-        <div class="space-x-4">
-            <a href="#cp" class="text-gray-200 hover:text-blue-400 transition-colors">CP</a>
-            <a href="#achievements" class="text-gray-200 hover:text-blue-400 transition-colors">Achievements</a>
-            <a href="#thesis" class="text-gray-200 hover:text-blue-400 transition-colors">Thesis</a>
-            <a href="#projects" class="text-gray-200 hover:text-blue-400 transition-colors">Projects</a>
-            <!-- NAVIGATION (inside <header>) -->
-            <a href="#research-interest" class="text-gray-200 hover:text-blue-400 transition-colors">Research Interest</a>
-            <a href="#education" class="text-gray-200 hover:text-blue-400 transition-colors">Education</a>
-            <a href="#leadership" class="text-gray-200 hover:text-blue-400 transition-colors">Leadership</a>
-            <a href="#certifications" class="text-gray-200 hover:text-blue-400 transition-colors">Certifications</a>
-            <a href="#skills" class="text-gray-200 hover:text-blue-400 transition-colors">Skills</a>
-            <a href="#resume" class="text-gray-200 hover:text-blue-400 transition-colors">Resume</a>
-            <!--<a href="#contact" class="text-gray-200 hover:text-blue-400 transition-colors">Contact</a> -->
-        </div>
-    </nav>
-</header>
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </span>
 
-<main>
-    <!-- Hero Section with Animated Gradient -->
-    <!-- <section class="relative py-24 md:py-32 text-center px-4 text-white overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-700 via-indigo-800 to-gray-900 animate-gradient bg-[length:400%_400%]"></div>
+        <span class="theme-toggle">
+          <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22 3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z" />
+          </svg>
+        </span>
+      </header>
 
-        <div class="relative max-w-4xl mx-auto">
-            <img src="assets/img1.png" 
-                 alt="Md Kawsar Mahmud" 
-                 class="mx-auto rounded-full w-40 h-40 mb-6 object-cover ring-4 ring-white shadow-2xl hover:scale-105 transform transition duration-500">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight drop-shadow-lg">
-                Md. Kawsar Mahmud
-            </h1>
-            <p class="mt-4 text-xl md:text-2xl font-semibold text-teal-300 animate-pulse">
-                Competitive Programmer & Machine Learning Enthusiast
-            </p>
-            <p class="mt-2 text-gray-200">
-                Feni, Bangladesh | (+880) 1865547015
-            </p>
-            <div class="mt-8 flex justify-center space-x-6">
-                <a href="https://www.linkedin.com/in/md-kawsar-mahmud1/" target="_blank" 
-                   class="text-white hover:text-blue-300 transition transform hover:scale-110">
-                    <i class="fab fa-linkedin text-4xl"></i>
-                </a>
-                <a href="https://github.com/KMsojib" target="_blank" 
-                   class="text-white hover:text-gray-300 transition transform hover:scale-110">
-                    <i class="fab fa-github text-4xl"></i>
-                </a>
-                <a href="mailto:kawsarmahmud.cse@gmail.com" 
-                   class="text-white hover:text-red-400 transition transform hover:scale-110">
-                    <i class="fas fa-envelope text-4xl"></i>
-                </a>
-            </div>
-        </div>
-    </section> -->
-<section class="relative min-h-screen flex items-center justify-center text-center px-4 text-white overflow-hidden">
-    
-    <!-- Dark blue base -->
-    <div class="absolute inset-0 bg-[#050B1E]"></div>
-
-    <!-- Subtle glow -->
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.08),transparent_40%)]"></div>
-
-    <div class="relative max-w-4xl mx-auto">
-
-        <!-- Profile Image -->
-        <img src="assets/img1.png" 
-             alt="Md Kawsar Mahmud" 
-             class="mx-auto rounded-full
-                    w-64 h-64
-                    md:w-72 md:h-72
-                    lg:w-80 lg:h-80
-                    object-cover scale-110
-                    mb-6
-                    ring-4 ring-white/80
-                    shadow-2xl
-                    hover:scale-115
-                    transition duration-500">
-
-        <!-- Name -->
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-            Md. Kawsar Mahmud
-        </h1>
-
-        <!-- Title -->
-        <p class="mt-4 text-xl md:text-2xl font-semibold text-cyan-400">
-            Competitive Programmer & Machine Learning Enthusiast
-        </p>
-
-        <!-- Location -->
-        <p class="mt-2 text-gray-400">
-            Feni, Bangladesh | (+880) 1865547015
-        </p>
-
-        <!-- Social Links -->
-        <div class="mt-8 flex justify-center space-x-6">
-            <a href="https://www.linkedin.com/in/md-kawsar-mahmud-sojib/" 
-               class="hover:text-cyan-400 transition hover:scale-110">
-                <i class="fab fa-linkedin text-4xl"></i>
-            </a>
-
-            <a href="https://github.com/KMsojib" 
-               class="hover:text-gray-400 transition hover:scale-110">
-                <i class="fab fa-github text-4xl"></i>
-            </a>
-
-            <a href="#" 
-               class="hover:text-red-400 transition hover:scale-110">
-                <i class="fas fa-envelope text-4xl"></i>
-            </a>
-        </div>
-
-    </div>
-</section>
-
-
-    <style>
-    @keyframes gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .animate-gradient {
-      animation: gradient 12s ease infinite;
-    }
-    </style>
-
-<!-- 1. CP Profile -->
-<section id="cp" class="py-16 px-4 md:py-24 bg-gray-50">
-    <div class="container mx-auto">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold section-title">Competitive Programming Profile</h2>
-            <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
-                1000+ problems solved. All solutions are <strong>open-source on GitHub</strong> — clean, commented, and organized.
-            </p>
-        </div>
-
-        <!-- 3 Cards: Platform + Rating + GitHub in ONE -->
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-
-            <!-- LeetCode Card -->
-            <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-                        hover:shadow-xl hover:border-green-500 hover:scale-[1.02] 
-                        transition-all duration-300 flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <!-- Official LeetCode logo (CDN) -->
-                    <img src="https://assets.leetcode.com/static_assets/public/images/LeetCode_Logo_black.png"
-                         alt="LeetCode Logo"
-                         class="w-10 h-10 rounded-lg object-contain bg-white p-1"
-                         onerror="this.onerror=null; this.src='https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/leetcode.svg';">
-                    <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">
-                        Top 23%
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">LeetCode</h3>
-                <p class="text-sm text-gray-600 mt-2 flex-1">
-                    <strong>600+ Solved</strong> | Max Rating: <strong>1603</strong><br>
-                    Clean C++/Python solutions by topic.
-                </p>
-                <div class="mt-4 flex gap-2 text-sm">
-                    <a href="https://leetcode.com/u/Bay_maxxxx/" target="_blank"
-                       class="inline-flex items-center text-green-600 hover:text-green-800 font-medium">
-                        Profile
-                    </a>
-                    <span class="text-gray-400">|</span>
-                    <a href="https://github.com/KMsojib/LeetCode" target="_blank"
-                       class="inline-flex items-center text-green-600 hover:text-green-800 font-medium">
-                        Code
-                    </a>
-                </div>
-            </div>
-
-            <!-- Codeforces Card -->
-            <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-                        hover:shadow-xl hover:border-blue-500 hover:scale-[1.02] 
-                        transition-all duration-300 flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codeforces.svg"
-                         alt="Codeforces Logo"
-                         class="w-10 h-10 rounded-lg bg-white p-1"
-                         onerror="this.src='https://via.placeholder.com/40?text=CF';">
-                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">
-                        Newbie
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">Codeforces</h3>
-                <p class="text-sm text-gray-600 mt-2 flex-1">
-                    <strong>500+ Solved</strong> | Max Rating: <strong>1198</strong><br>
-                    100+ contests, Different tyeps of Problem Solved.
-                </p>
-                <div class="mt-4 flex gap-2 text-sm">
-                    <a href="https://codeforces.com/profile/Hiro-Hamada" target="_blank"
-                       class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                        Profile
-                    </a>
-                    <span class="text-gray-400">|</span>
-                    <a href="https://github.com/KMsojib/Competitive-Programming/tree/main/Codeforces" target="_blank"
-                       class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                        Code
-                    </a>
-                </div>
-            </div>
-
-            <!-- CodeChef Card -->
-            <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-                        hover:shadow-xl hover:border-orange-500 hover:scale-[1.02] 
-                        transition-all duration-300 flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codechef.svg"
-                         alt="CodeChef Logo"
-                         class="w-10 h-10 rounded-lg bg-white p-1"
-                         onerror="this.src='https://via.placeholder.com/40?text=CC';">
-                    <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs font-bold rounded-full">
-                        2 Stars
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">CodeChef</h3>
-                <p class="text-sm text-gray-600 mt-2 flex-1">
-                    <strong>250+ Solved</strong> | Max Rating: <strong>1472</strong><br>
-                    Starters, topic wise problem solutions.
-                </p>
-                <div class="mt-4 flex gap-2 text-sm">
-                    <a href="https://www.codechef.com/users/kawsar_12" target="_blank"
-                       class="inline-flex items-center text-orange-600 hover:text-orange-800 font-medium">
-                        Profile
-                    </a>
-                    <span class="text-gray-400">|</span>
-                    <a href="https://github.com/KMsojib/Competitive-Programming/tree/main/CodeChef" target="_blank"
-                       class="inline-flex items-center text-orange-600 hover:text-orange-800 font-medium">
-                        Code
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-  <!-- 2. Achievements -->
-<section id="achievements" class="py-16 px-4 md:py-24 bg-gray-50">
-    <div class="container mx-auto">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold section-title text-gray-900">Achievements</h2>
-            <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
-                Ranked in regional and national ICPC contests, university championships, and intra-university events.
-            </p>
-        </div>
-
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <!-- Achievement 6 -->
-            <a href="https://drive.google.com/file/d/1GKFIfiSs5FAm0J9-5AsXlzf9kIjYCu2/view" target="_blank"
-               class="group bg-white p-6 rounded-xl shadow-md border border-gray-200
-                      hover:shadow-xl hover:border-yellow-500 hover:scale-[1.02]
-                      transition-all duration-300 flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-2 bg-yellow-100 rounded-lg">
-                        <i class="fas fa-crown text-yellow-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-bold rounded-full">
-                        Champion
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">Independence Day Intra 2024</h3>
-                <p class="text-sm text-gray-600 mt-2 flex-1">
-                    <strong>1st Place / 12</strong><br>
-                    Handle: Kawsar12345 | CPG CAFU
-                </p>
-                <div class="mt-4 text-xs text-yellow-600 font-medium">
-                    <i class="fas fa-external-link-alt mr-1"></i> View Certificate
-                </div>
-            </a>
-                        <!-- Achievement 3 -->
-            <a href="https://bapsoj.org/contests/icpc-asia-dhaka-regional-contest-2024-onsite-round/standings" target="_blank"
-               class="group bg-white p-6 rounded-xl shadow-md border border-gray-200
-                      hover:shadow-xl hover:border-purple-500 hover:scale-[1.02]
-                      transition-all duration-300 flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-2 bg-purple-100 rounded-lg">
-                        <i class="fas fa-award text-purple-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full">
-                        ICPC 2024
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">ICPC Dhaka Regional 2024</h3>
-                <p class="text-sm text-gray-600 mt-2 flex-1">
-                    <strong>Rank 188 / 309</strong><br>
-                    Team: FU_Convex_Hull
-                </p>
-                <div class="mt-4 text-xs text-purple-600 font-medium">
-                    <i class="fas fa-external-link-alt mr-1"></i> View Standings
-                </div>
-            </a>
-            <!-- Achievement 2 -->
-            <a href="https://bapsoj.org/contests/icpc-dhaka-regional-site-2023/standings" target="_blank"
-               class="group bg-white p-6 rounded-xl shadow-md border border-gray-200
-                      hover:shadow-xl hover:border-blue-500 hover:scale-[1.02]
-                      transition-all duration-300 flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-2 bg-blue-100 rounded-lg">
-                        <i class="fas fa-trophy text-blue-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">
-                        ICPC Regional
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">ICPC Dhaka Regional 2023</h3>
-                <p class="text-sm text-gray-600 mt-2 flex-1">
-                    <strong>Rank 91 / 225</strong><br>
-                    Team: FU_TLE_Eliminators
-                </p>
-                <div class="mt-4 text-xs text-blue-600 font-medium">
-                    <i class="fas fa-external-link-alt mr-1"></i> View Standings
-                </div>
-            </a>
-            <!-- Achievement 1 -->
-            <a href="https://toph.co/c/cuet-inter-university-codestorm-1-0/standings" target="_blank"
-               class="group bg-white p-6 rounded-xl shadow-md border border-gray-200
-                      hover:shadow-xl hover:border-green-500 hover:scale-[1.02]
-                      transition-all duration-300 flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-2 bg-green-100 rounded-lg">
-                        <i class="fas fa-medal text-green-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">
-                        Top 36%
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">CUET IUPC CodeStorm 1.0</h3>
-                <p class="text-sm text-gray-600 mt-2 flex-1">
-                    <strong>Rank 36 / 100</strong><br>
-                    Team: FU_TLE_Eliminators | 2024
-                </p>
-                <div class="mt-4 text-xs text-green-600 font-medium">
-                    <i class="fas fa-external-link-alt mr-1"></i> View Standings
-                </div>
-            </a>
-
-
-            <!-- Achievement 4 -->
-            <a href="https://toph.co/c/cou-bracnet-inter-university-2023/standings" target="_blank"
-               class="group bg-white p-6 rounded-xl shadow-md border border-gray-200
-                      hover:shadow-xl hover:border-orange-500 hover:scale-[1.02]
-                      transition-all duration-300 flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-2 bg-orange-100 rounded-lg">
-                        <i class="fas fa-star text-orange-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs font-bold rounded-full">
-                        Inter-University
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">CoU-BRACNet IUPC 2023</h3>
-                <p class="text-sm text-gray-600 mt-2 flex-1">
-                    <strong>Rank 49 / 72</strong><br>
-                    Team: FU_TLE_Eliminators
-                </p>
-                <div class="mt-4 text-xs text-orange-600 font-medium">
-                    <i class="fas fa-external-link-alt mr-1"></i> View Standings
-                </div>
-            </a>
-
-            <!-- Achievement 5 -->
-            <a href="https://your-link.com" target="_blank"
-               class="group bg-white p-6 rounded-xl shadow-md border border-gray-200
-                      hover:shadow-xl hover:border-teal-500 hover:scale-[1.02]
-                      transition-all duration-300 flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-2 bg-teal-100 rounded-lg">
-                        <i class="fas fa-flag text-teal-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs font-bold rounded-full">
-                        Divisional
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">PU IUPC Chittagong 2024</h3>
-                <p class="text-sm text-gray-600 mt-2 flex-1">
-                    <strong>Rank 14 / 70</strong><br>
-                    Team: FU_TLE_Eliminators
-                </p>
-                <div class="mt-4 text-xs text-teal-600 font-medium">
-                    <i class="fas fa-external-link-alt mr-1"></i> View Standings
-                </div>
-            </a>
-
-            
-
-            <!-- Achievement 7 -->
-            <a href="https://bapsoj.org/contests/uiu-inter-university-programming-contest-2025/standings" target="_blank"
-               class="group bg-white p-6 rounded-xl shadow-md border border-gray-200
-                      hover:shadow-xl hover:border-indigo-500 hover:scale-[1.02]
-                      transition-all duration-300 flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-2 bg-indigo-100 rounded-lg">
-                        <i class="fas fa-calendar-check text-indigo-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold rounded-full">
-                        2025
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">UIU Inter-University 2025</h3>
-                <p class="text-sm text-gray-600 mt-2 flex-1">
-                    <strong>Rank 144</strong><br>
-                    Team: FU_TLE_Eliminators
-                </p>
-                <div class="mt-4 text-xs text-indigo-600 font-medium">
-                    <i class="fas fa-external-link-alt mr-1"></i> View Standings
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- 3. Thesis -->
-<section id="thesis" class="py-16 px-4 md:py-24 container mx-auto">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="relative z-10 text-3xl font-bold section-title text-gray-900 px-6 py-2">Thesis</h2>
-        
-        <div class="mt-12 max-w-3xl mx-auto">
-            <!-- Thesis Card -->
-            <div class="group bg-white p-8 rounded-xl shadow-md border border-gray-200 
-                        hover:shadow-2xl hover:border-purple-500 hover:scale-[1.02] 
-                        transition-all duration-300 flex flex-col">
-                
-                <div class="flex items-start mb-4">
-                    <div class="p-3 bg-purple-100 rounded-lg mr-4">
-                        <i class="fas fa-brain text-purple-600 text-2xl"></i>
-                    </div>
-                    <div class="text-left flex-1">
-                        <h3 class="text-2xl font-bold text-gray-800 leading-tight">
-                            ARU-NET: Encoder-Decoder Based Image Reconstruction Towards Efficient Downstream Vision Tasks
-                        </h3>
-                        <p class="text-sm text-purple-600 font-medium mt-1">
-                            Undergraduate Thesis • Medical Imaging & Deep Learning
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Bullet Points -->
-                <ul class="text-left text-sm text-gray-700 list-disc list-inside space-y-1 mt-2">
-                    <li>Working on image reconstruction using encoder–decoder architectures</li>
-                    <li>Focused on improving low-quality medical and agricultural images</li>
-                    <li>Aiming to enhance downstream task performance using reconstructed images</li>
-                </ul>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- 4. Projects -->
-<section id="projects" class="py-16 px-4 md:py-24 container mx-auto">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="relative z-10 text-3xl font-bold section-title text-gray-900 px-6 py-2">Projects</h2>
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-             <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-            hover:shadow-xl hover:border-blue-500 hover:scale-[1.02] 
-            transition-all duration-300 flex flex-col h-full">
-
-        <div class="flex items-start mb-4">
-        <div class="p-3 bg-blue-100 rounded-lg mr-4">
-            <i class="fas fa-brain text-blue-600 text-xl"></i>
-        </div>
-        <!-- Project: MedRecon-ARU: MRI & CT Image Reconstruction -->
-        <div class="text-left">
-            <h3 class="text-xl font-bold text-gray-800">MedRecon-ARU: MRI & CT Image Reconstruction</h3>
-            <p class="text-sm text-gray-500">Deep Learning · Attention Residual U-Net</p>
-        </div>
-    </div>
-
-    <div class="flex-1 text-left space-y-2 text-gray-600 text-sm">
-        <p>• Developed <strong>MedRecon-ARU</strong>, an Attention Residual U-Net architecture for medical image reconstruction.</p>
-        <p>• Added <strong>0.5% simulated technical noise</strong> to MRI & CT images to mimic real-world acquisition artifacts.</p>
-        <p>• Achieved high reconstruction performance on Brain MRI and CT datasets using <strong>PSNR</strong> and <strong>SSIM</strong> metrics.</p>
-        <p>• Included training curves, validation loss trends, and side-by-side reconstructed outputs.</p>
-        <p>• Model designed with attention gates + residual blocks for improved structural recovery.</p>
-    </div>
-
-    <div class="mt-5 space-x-3">
-        <a href="https://github.com/KMsojib/MedRecon-ARU-Attention-Residual-U-Net-for-MRI-CT-Image-Reconstruction" 
-        target="_blank" 
-        class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
-            <i class="fab fa-github mr-2"></i> View on GitHub
-            <i class="fas fa-external-link-alt ml-1 text-xs"></i>
-        </a>
-
-        <a href="https://drive.google.com/file/d/19XqFRotvV-gwDr0AYzxI388YTIHjqEcq/view" target="_blank" 
-        class="inline-flex items-center text-red-600 font-medium hover:text-red-800 transition">
-            <i class="fas fa-file-pdf mr-2"></i> Report
-        </a>
-    </div>
-</div>
-            <!-- Project 1 -->
-            <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-                        hover:shadow-xl hover:border-blue-500 hover:scale-[1.02] 
-                        transition-all duration-300 flex flex-col h-full">
-                <div class="flex items-start mb-4">
-                    <div class="p-3 bg-blue-100 rounded-lg mr-4">
-                        <i class="fas fa-heartbeat text-blue-600 text-xl"></i>
-                    </div>
-                    <div class="text-left">
-                        <h3 class="text-xl font-bold text-gray-800">Breast Cancer Prediction</h3>
-                        <p class="text-sm text-gray-500">Medical Diagnosis ML</p>
-                    </div>
-                </div>
-                <div class="flex-1 text-left space-y-2 text-gray-600 text-sm">
-                    <p>• Built predictive models using Logistic Regression, Random Forest, SVM, and Decision Tree.</p>
-                    <p>• Achieved <strong>ROC-AUC: 0.99</strong> (Logistic), <strong>~0.994</strong> (Random Forest CV).</p>
-                    <p>• Used SHAP & LIME for model interpretability.</p>
-                </div>
-                <a href="https://github.com/KMsojib/Hands-On-Machine-Learning-Projects/tree/main/Breast%20Cancer%20Prediction" 
-                   target="_blank" 
-                   class="mt-5 inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
-                    <i class="fab fa-github mr-2"></i> View on GitHub
-                    <i class="fas fa-external-link-alt ml-1 text-xs"></i>
-                </a>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-                        hover:shadow-xl hover:border-teal-500 hover:scale-[1.02] 
-                        transition-all duration-300 flex flex-col h-full">
-                <div class="flex items-start mb-4">
-                    <div class="p-3 bg-teal-100 rounded-lg mr-4">
-                        <i class="fas fa-chart-line text-teal-600 text-xl"></i>
-                    </div>
-                    <div class="text-left">
-                        <h3 class="text-xl font-bold text-gray-800">Diabetes Prediction</h3>
-                        <p class="text-sm text-gray-500">Medical Diagnosis ML</p>
-                    </div>
-                </div>
-                <div class="flex-1 text-left space-y-2 text-gray-600 text-sm">
-                    <p>• Evaluated classifiers on Pima Indians Diabetes dataset.</p>
-                    <p>• Achieved <strong>~77%</strong> validation accuracy (Logistic Regression).</p>
-                    <p>• Identified overfitting in tree models; visualized training vs validation.</p>
-                </div>
-                <a href="https://github.com/KMsojib/Hands-On-Machine-Learning-Projects/tree/main/Diabetes%20Prediction" 
-                   target="_blank" 
-                   class="mt-5 inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
-                    <i class="fab fa-github mr-2"></i> View on GitHub
-                    <i class="fas fa-external-link-alt ml-1 text-xs"></i>
-                </a>
-            </div>
-            
-            <!-- Project 3 -->
-<div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-            hover:shadow-xl hover:border-green-500 hover:scale-[1.02] 
-            transition-all duration-300 flex flex-col h-full">
-    <div class="flex items-start mb-4">
-        <div class="p-3 bg-green-100 rounded-lg mr-4">
-            <i class="fas fa-seedling text-green-600 text-xl"></i>
-        </div>
-        <div class="text-left">
-            <h3 class="text-xl font-bold text-gray-800">Rice Leaf Disease Classification</h3>
-            <p class="text-sm text-gray-500">Deep Learning · YOLOv8n/v11n/v26n</p>
-        </div>
-    </div>
-    <div class="flex-1 text-left space-y-2 text-gray-600 text-sm">
-        <p>• Fine-tuned YOLOv8n, YOLOv11n, and YOLOv26n on 855 real-world Bangladeshi rice leaf images to classify four disease categories.</p>
-        <p>• Achieved up to <strong>92% Top-1 accuracy</strong>, supported by confusion matrices and F1-score analysis.</p>
-        <p>• Demonstrated practical AI for resource-constrained agriculture with edge/mobile deployment potential.</p>
-    </div>
-    <div class="mt-5 space-x-3">
-        <a href="https://github.com/KMsojib/Rice-Leaf-Disease-Classification" 
-           target="_blank" 
-           class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
-            <i class="fab fa-github mr-2"></i> View on GitHub
-            <i class="fas fa-external-link-alt ml-1 text-xs"></i>
-        </a>
-    </div>
-</div>
-            <!-- Project 4 -->
-<!-- Project 4 -->
-<div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-            hover:shadow-xl hover:border-green-500 hover:scale-[1.02] 
-            transition-all duration-300 flex flex-col h-full">
-
-    <div class="flex items-start mb-4">
-        <div class="p-3 bg-green-100 rounded-lg mr-4">
-            <i class="fas fa-keyboard text-green-600 text-xl"></i>
-        </div>
-        <div class="text-left">
-            <h3 class="text-xl font-bold text-gray-800">🎮 TypeBlaze — Typing Speed Game</h3>
-            <p class="text-sm text-gray-500">HTML, CSS, JavaScript, Chart.js</p>
-        </div>
-    </div>
-
-    <div class="flex-1 text-left space-y-2 text-gray-600 text-sm">
-    <p>• Built an interactive typing speed game where users type displayed words within a time limit (15s/30s/60s).</p>
-    <p>• Implemented real-time word matching with instant feedback, score tracking, and accuracy calculation.</p>
-    <p>• Added WPM (Words Per Minute) performance tracking based on user typing speed.</p>
-    <p>• Integrated Chart.js to visualize typing performance trends after each session.</p>
-    </div>
-
-    <div class="mt-5 space-x-3">
-        <a href="https://kmsojib.github.io/typeblaze-game/" 
-           target="_blank" 
-           class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
-            <i class="fas fa-play mr-2"></i> Live Demo
-            <i class="fas fa-external-link-alt ml-1 text-xs"></i>
-        </a>
-
-        <a href="https://github.com/KMsojib/typeblaze-game" 
-           target="_blank" 
-           class="inline-flex items-center text-gray-700 font-medium hover:text-black transition">
-            <i class="fab fa-github mr-2"></i> Source Code
-            <i class="fas fa-external-link-alt ml-1 text-xs"></i>
-        </a>
-    </div>
-</div>
-
-</section>
-
-<!--Research Interest--> 
-<section id="research-interest" class="py-16 px-4 md:py-24 bg-gray-50">
-    <div class="container mx-auto">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold section-title text-gray-900">Research Interest</h2>
-        </div>
-
-        <div class="mt-12 max-w-3xl mx-auto">
-            <div class="group bg-white p-8 rounded-xl shadow-md border border-gray-200
-                        hover:shadow-xl hover:border-indigo-500 hover:scale-[1.02]
-                        transition-all duration-300 flex flex-col h-full">
-                <div class="flex items-center justify-between mb-5">
-                    <div class="p-2 bg-indigo-100 rounded-lg">
-                        <i class="fas fa-microscope text-indigo-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold rounded-full">
-                        Core Focus
-                    </span>
-                </div>
-
-                <div class="text-left text-gray-700 text-base leading-relaxed">
-                <p>
-                    My research interests lie at the intersection of 
-                    <strong>Computer Vision</strong> and <strong>Deep Learning</strong>, 
-                    with a core focus on <strong>image reconstruction</strong> — recovering 
-                    high-quality visual information from degraded, noisy, or low-resolution inputs.
-                </p>
-                <p class="mt-4">
-                    Within this domain, I am particularly drawn to <strong>medical imaging</strong> 
-                    and <strong>medical image reconstruction</strong>, where faithful image recovery 
-                    is critical for downstream clinical tasks such as lesion detection, segmentation, 
-                    and diagnosis. I am interested in designing deep architectures — including 
-                    attention-based encoder-decoder networks — that reconstruct clinically reliable 
-                    images under real-world degradation conditions.
-                </p>
-                <p class="mt-4">
-                    More broadly, I explore how reconstruction-driven representation learning can 
-                    improve the robustness of vision models operating in <strong>resource-constrained 
-                    or low-quality imaging environments</strong>, with applications spanning both 
-                    medical and agricultural visual systems.
-                </p>
-            </div>
-            </div>
-        </div>
-    </div>
-</section> 
-
-<!--6. Education -->
-<section id="education" class="bg-gray-50 py-16 px-4 md:py-24">
-    <div class="container mx-auto">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold section-title text-gray-900">Education</h2>
-            <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
-                Strong academic foundation in Computer Science with excellence in both theory and practice.
-            </p>
-        </div>
-
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <!-- BSc Card -->
-            <div class="group bg-white p-8 rounded-xl shadow-md border border-gray-200
-                        hover:shadow-xl hover:border-blue-500 hover:scale-[1.02]
-                        transition-all duration-300 flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-3 bg-blue-100 rounded-lg">
-                        <i class="fas fa-graduation-cap text-blue-600 text-2xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">
-                        Completed
-                    </span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800">B.Sc. in Computer Science & Engineering</h3>
-                <p class="text-sm font-medium text-gray-600 mt-1">Feni University</p>
-                <div class="mt-4 space-y-2 text-sm text-gray-600">
-                    <p><strong>CGPA: 3.83 / 4.00</strong> (76.00%)</p>
-                    <p>01/2022 – 31/2025</p>
-                </div>
-                <div class="mt-4 flex items-center text-xs text-blue-600 font-medium">
-                    <i class="fas fa-map-marker-alt mr-1"></i> Feni, Bangladesh
-                </div>
-            </div>
-
-            <!-- HSC Card -->
-            <div class="group bg-white p-8 rounded-xl shadow-md border border-gray-200
-                        hover:shadow-xl hover:border-green-500 hover:scale-[1.02]
-                        transition-all duration-300 flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-3 bg-green-100 rounded-lg">
-                        <i class="fas fa-school text-green-600 text-2xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">
-                        Completed
-                    </span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800">Higher Secondary Certificate (HSC)</h3>
-                <p class="text-sm font-medium text-gray-600 mt-1">Alauddin Ahmed Chowdhury Nasim College</p>
-                <div class="mt-4 space-y-2 text-sm text-gray-600">
-                    <p><strong>GPA: 4.33 / 5.00</strong></p>
-                    <p>Science Group | 2018 – 2019</p>
-                </div>
-                <div class="mt-4 flex items-center text-xs text-green-600 font-medium">
-                    <i class="fas fa-map-marker-alt mr-1"></i> Parashuram, Feni
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Remaining sections (unchanged order) -->
-    <!-- Leadership -->
-    <section id="leadership" class="py-16 px-4 md:py-24 bg-gray-50">
-      <div class="container mx-auto">
-        <div class="max-w-5xl mx-auto text-center">
-          <h2 class="text-3xl font-bold section-title">Volunteering & Leadership Experience</h2>
-          <p class="mt-2 text-gray-600">Demonstrating leadership, teamwork, and initiative in academic and extracurricular settings.</p>
-          <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-green-500 hover:shadow-xl hover:scale-[1.02] transition duration-200">
-              <div class="flex justify-center mb-4">
-                <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0-2.5 2-4.5 4.5-4.5S21 8.5 21 11s-2 4.5-4.5 4.5S12 13.5 12 11zM3 12a9 9 0 1118 0A9 9 0 013 12z" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800">Joint Secretary, CAFU</h3>
-              <p class="text-sm font-medium text-gray-500">Feni University | 01/2025 – Present</p>
-              <p class="mt-3 text-gray-600 text-sm leading-relaxed">
-                Spearheaded planning and coordination of events and workshops, fostering collaboration and promoting competitive programming culture on campus.
+      <div class="post">
+        <!-- ===================== ABOUT ===================== -->
+        <div class="post-content" id="about">
+          <figure class="profile-hero">
+            <img src="images/profile.png" alt="Md Kawsar Mahmud" />
+            <figcaption>
+              <h1>
+                <span class="accent">M</span>d <span class="accent">K</span>awsar <span class="accent">M</span>ahmud
+                <a href="https://github.com/KMsojib" class="intro-github-link" title="GitHub" aria-label="Md Kawsar Mahmud on GitHub" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg></a>
+              </h1>
+              <p>
+                I am a <strong>Computer Science graduate</strong> from 
+                <a href="https://feniuniversity.ac.bd/" target="_blank" rel="noopener noreferrer">Feni University</a> (Dec 2025) 
+                with an outstanding <strong>CGPA of 3.83/4.00</strong>.
               </p>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-green-500 hover:shadow-xl hover:scale-[1.02] transition duration-200">
-              <div class="flex justify-center mb-4">
-                <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800">Leader, Programming Club (CPG)</h3>
-              <p class="text-sm font-medium text-gray-500">Feni University | 01/2025 – Present</p>
-              <p class="mt-3 text-gray-600 text-sm leading-relaxed">
-                Directed club initiatives including weekly contests and mentoring. Guided juniors in algorithmic thinking and problem-solving strategies.
+
+              <p>
+                My research focuses on the intersection of <strong class="accent">Deep Learning</strong> and <strong class="accent">Computer Vision</strong>, specifically developing robust AI methods for <strong>Medical Image Reconstruction & Analysis</strong>. I design deep learning models to recover degraded clinical scans and solve complex inverse imaging problems. 
               </p>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-green-500 hover:shadow-xl hover:scale-[1.02] transition duration-200">
-              <div class="flex justify-center mb-4">
-                <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 21v-2a4 4 0 00-3-3.87M9 7H7a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-4h.01M12 11v6m3-3H9" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800">Co-Leader, Programming Club (CPG)</h3>
-              <p class="text-sm font-medium text-gray-500">Feni University | 01/2024 – 12/2024</p>
-              <p class="mt-3 text-gray-600 text-sm leading-relaxed">
-                Conducted training in C, C++, and DSA. Helped establish structured learning resources and fostered peer-to-peer knowledge sharing.
+
+              <p>
+                Broadly, I am driven to build reliable, generalizable AI systems for real-world challenges—ranging from healthcare data to <strong>Transformer-based Few-Shot Learning</strong> for agricultural applications.
               </p>
-            </div>
+              
+              <p style="margin-top: 15px;">
+                <strong>Email:</strong> <a href="mailto:kawsarmahmud.cse@gmail.com">kawsarmahmud.cse@gmail.com</a> &nbsp;&middot;&nbsp;
+                <a href="https://github.com/KMsojib" target="_blank" rel="noopener noreferrer">GitHub</a> &nbsp;&middot;&nbsp;
+                <a href="https://linkedin.com/in/md-kawsar-mahmud-sojib" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+
+<!-- ===================== PROFESSIONAL EXPERIENCE ===================== -->
+        <div class="post-content" id="Experience">
+          <h2>Professional Experience</h2>
+
+          <div class="experience-item" style="margin-bottom: 15px;">
+            <h3 style="margin-bottom: 5px;">Research & Teaching Assistant</h3>
+            <p style="margin: 0;">
+                <a href="https://daffodilvarsity.edu.bd/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                  <strong class="accent">Daffodil International University (DIU)</strong>
+                </a> &nbsp;&middot;&nbsp; Dept. of CSE
+            </p>
+            <p style="margin: 5px 0 0 0;">
+              <strong>Timeline:</strong> May 2026 – Present <br>
+              <strong>Supervisor:</strong> Muhammad Abu Rayan
+            </p>
+          </div>
+
+          <div class="section-body">
+            <ul>
+              <li>Conduct research on machine learning algorithms applied to educational datasets.</li>
+              <li>Develop and evaluate predictive models for student learning analysis.</li>
+              <li>Assist with computational experiments, literature reviews, and core academic activities.</li>
+            </ul>
           </div>
         </div>
+
+        <!-- ===================== RESEARCH ===================== -->
+        <div class="post-content" id="Research">
+          <h2>Research</h2>
+
+          <p>
+            I develop <strong class="accent">deep learning</strong> and computer vision methods for medical imaging and real-world image understanding. 
+            My research focuses on medical image reconstruction, image restoration, and AI-driven healthcare, with an interest in 
+            building robust and generalizable models for medical image analysis. I am also exploring Transformer-based few-shot learning 
+            for agricultural image classification and detection to improve recognition performance under limited data scenarios.
+          </p>
+
+          <p><strong class="accent">-&gt; Medical Imaging & AI for Healthcare:</strong></p>
+          <div class="section-body">
+            <ul>
+              <li>Medical Image Reconstruction (MRI, CT, X-ray)</li>
+              <li>Medical Image Analysis & Computer-Aided Diagnosis</li>
+              <li>Deep Learning for Healthcare Applications</li>
+            </ul>
+          </div>
+
+          <p><strong class="accent">-&gt; Deep Learning & Computer Vision:</strong></p>
+          <div class="section-body">
+            <ul>
+              <li>Image Reconstruction, Restoration & Enhancement</li>
+              <li>CNNs, Vision Transformers & PyTorch</li>
+              <li>Image Classification & Representation Learning</li>
+            </ul>
+          </div>
+
+          <p><strong class="accent">-&gt; Agricultural AI:</strong></p>
+          <div class="section-body">
+            <ul>
+              <li>Transformer-based Few-Shot Learning</li>
+              <li>Agricultural Image Classification & Object Detection</li>
+            </ul>
+          </div>
+
+          <p><strong class="accent">-&gt; Current Research Interests:</strong></p>
+          <div class="section-body">
+            <ul>
+              <li>Medical Image Reconstruction & Computational Imaging</li>
+              <li>Medical Image Analysis & AI for Healthcare</li>
+              <li>Trustworthy and Generalizable Medical AI</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- ===================== RESEARCH PROJECTS ===================== -->
+        <div class="post-content post-content--publications" id="projects">
+          <h2 class="scholar-link">Research Projects</h2>
+         
+          <figure class="paper-figure">
+            <img src="projects/Thesis.jpg?v=2" alt="Thesis thumbnail" loading="lazy" />
+            <figcaption>
+              <strong class="accent">Thesis: ARU-NET: Encoder-Decoder Based Image Reconstruction Towards Efficient Downstream Vision Tasks</strong>
+              <p class="paper-tags"><span class="paper-tag">Deep Learning, Computer Vision</span><span class="paper-tag">Image Reconstruction</span></p>
+              <a href="https://github.com/KMsojib" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:var(--brand-color);">Overview</a> /
+              <a href="https://github.com/KMsojib" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:var(--brand-color);">Code</a>
+            </figcaption>
+          </figure>
+
+          <figure class="paper-figure">
+            <img src="projects/med-recon.PNG?v=2" alt="MedRecon thumbnail" loading="lazy" />
+            <figcaption>
+              <strong class="accent">MedRecon-ARU: MRI & CT Image Reconstruction</strong>
+              <p class="paper-tags"><span class="paper-tag">Deep Learning</span><span class="paper-tag">Medical Image Reconstruction</span></p>
+              <a href="https://github.com/KMsojib/MedRecon-ARU-Attention-Residual-U-Net-for-MRI-CT-Image-Reconstruction/blob/main/README.md" style="text-decoration:none;color:var(--brand-color);" target="_blank" rel="noopener noreferrer">Overview</a> /
+              <a href="https://github.com/KMsojib/MedRecon-ARU-Attention-Residual-U-Net-for-MRI-CT-Image-Reconstruction" style="text-decoration:none;color:var(--brand-color);" target="_blank" rel="noopener noreferrer">Code</a>
+            </figcaption>
+          </figure>
+
+          <figure class="paper-figure">
+            <img src="projects/breast-cancer.PNG?v=2" alt="Breast Cancer project thumbnail" loading="lazy" />
+            <figcaption>
+              <strong class="accent">Breast Cancer Prediction</strong>
+              <p class="paper-tags"><span class="paper-tag">Machine Learning</span><span class="paper-tag">Medical Image Reconstruction</span></p>
+              <a href="https://github.com/KMsojib/Hands-On-Machine-Learning-Projects/tree/main/Breast%20Cancer%20Prediction#readme" style="text-decoration:none;color:var(--brand-color);" target="_blank" rel="noopener noreferrer">Overview</a> /
+              <a href="https://github.com/KMsojib/Hands-On-Machine-Learning-Projects/tree/main/Breast%20Cancer%20Prediction" style="text-decoration:none;color:var(--brand-color);" target="_blank" rel="noopener noreferrer">Code</a>
+            </figcaption>
+          </figure>
+
+          <figure class="paper-figure">
+            <img src="projects/Rice-leaf.jpg?v=2" alt="Rice Leaf Disease Classification Thumbnail" loading="lazy" />
+            <figcaption>
+              <strong class="accent">Rice Leaf Disease Classification</strong>
+              <p class="paper-tags">
+                <span class="paper-tag">Comparative Benchmarking of YOLOv8n-cls, YOLOv11n-cls, and YOLOv26n-cls on Real-World Bangladeshi Field Images</span>
+                <span class="paper-tag">Agricultural Computer Vision</span>
+              </p>
+              <a href="https://github.com/KMsojib/Rice-Leaf-Disease-Classification/blob/main/README.md" style="text-decoration:none;color:var(--brand-color);" target="_blank" rel="noopener noreferrer">Overview</a> /
+              <a href="https://github.com/KMsojib/Rice-Leaf-Disease-Classification" style="text-decoration:none;color:var(--brand-color);" target="_blank" rel="noopener noreferrer">Code</a>
+            </figcaption>
+          </figure>
+        </div> 
+<!-- ===================== CP PROFILE ===================== -->
+       <div class="post-content" id="Cp-Profile">
+        <h2>Competitive Programming Profile</h2>
+        <!-- LeetCode Platform -->
+      <p style="display: inline-flex; align-items: center; width: 100%; gap: 6px;">
+        <strong class="accent">LeetCode</strong> — 
+        <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leetcode.svg" alt="LeetCode Logo" style="width: 18px; height: 18px;" />
+      </p>
+      <div class="section-body">
+        <ul>
+          <li><strong>Stats:</strong> 600+ Problems Solved | Max Rating: <strong>1603</strong> (Top 23%)</li>
+          <li><strong>Content:</strong> Clean C++ and Python solutions categorized systematically by topic.</li>
+          <li>
+            <strong>Links:</strong> 
+            <a href="https://leetcode.com/u/Bay_maxxxx/" target="_blank" rel="noopener noreferrer">Profile</a> &nbsp;|
+            <a href="https://github.com/KMsojib/LeetCode" target="_blank" rel="noopener noreferrer">Repository</a>
+          </li>
+        </ul>
       </div>
-    </section>
 
-    <!-- Certifications -->
-    <!-- Certifications & Professional Training -->
-<section id="certifications" class="bg-gray-50 py-16 px-4 md:py-24">
-    <div class="container mx-auto">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="relative z-10 text-3xl font-bold section-title text-gray-900 px-6 py-2">
-                Certifications & Professional Training
-            </h2>
-            <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
-                Verified skills in Machine Learning, AI, and Competitive Programming from top platforms and experts.
-            </p>
-        </div>
+      <!-- Codeforces Platform -->
+      <p style="display: inline-flex; align-items: center; width: 100%; gap: 6px;">
+        <strong class="accent">Codeforces</strong> — 
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codeforces.svg" alt="Codeforces Logo" style="width: 18px; height: 18px;" />
+      </p>
+      <div class="section-body">
+        <ul>
+          <li><strong>Stats:</strong> 500+ Problems Solved | Max Rating: <strong>1198</strong> (Newbie)</li>
+          <li><strong>Content:</strong> Actively competed in over 100 contests solving diverse mathematical and algorithmic challenges.</li>
+          <li>
+            <strong>Links:</strong> 
+            <a href="https://codeforces.com/profile/Hiro-Hamada" target="_blank" rel="noopener noreferrer">Profile</a> &nbsp; |
+            <a href="https://github.com/KMsojib/Competitive-Programming/tree/main/Codeforces" target="_blank" rel="noopener noreferrer">Repository</a>
+          </li>
+        </ul>
+      </div>
 
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-
-            <!-- Coursera - ML Specialization 1 -->
-            <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-                        hover:shadow-xl hover:border-blue-500 hover:scale-[1.02] 
-                        transition-all duration-300 flex flex-col">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-2 bg-blue-100 rounded-lg">
-                        <i class="fas fa-certificate text-blue-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">
-                        100%
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">Supervised ML: Regression & Classification</h3>
-                <p class="text-sm text-gray-500 mt-1">Coursera • Andrew Ng</p>
-                <p class="text-xs text-gray-600 mt-3 flex-1">
-                    Mastered regression, classification, cost functions, and gradient descent.
-                </p>
-                <a href="https://www.coursera.org/account/accomplishments/certificate/4HKLY6OOZT47" 
-                   target="_blank" 
-                   class="mt-4 inline-flex items-center text-blue-600 font-medium hover:text-blue-800 text-sm">
-                    <i class="fas fa-external-link-alt mr-1"></i> View Certificate
-                </a>
-            </div>
-
-            <!-- Coursera - ML Specialization 2 -->
-            <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-                        hover:shadow-xl hover:border-blue-500 hover:scale-[1.02] 
-                        transition-all duration-300 flex flex-col">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-2 bg-blue-100 rounded-lg">
-                        <i class="fas fa-certificate text-blue-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">
-                        100%
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">Advanced Learning Algorithms</h3>
-                <p class="text-sm text-gray-500 mt-1">Coursera • DeepLearning.AI</p>
-                <p class="text-xs text-gray-600 mt-3 flex-1">
-                    Neural networks, decision trees, ensemble methods, and regularization.
-                </p>
-                <a href="https://www.coursera.org/account/accomplishments/certificate/FB8TSE1V2AKI" 
-                   target="_blank" 
-                   class="mt-4 inline-flex items-center text-blue-600 font-medium hover:text-blue-800 text-sm">
-                    <i class="fas fa-external-link-alt mr-1"></i> View Certificate
-                </a>
-            </div>
-
-            <!-- Simplilearn -->
-            <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-                        hover:shadow-xl hover:border-teal-500 hover:scale-[1.02] 
-                        transition-all duration-300 flex flex-col">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-2 bg-teal-100 rounded-lg">
-                        <i class="fas fa-graduation-cap text-teal-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-bold rounded-full">
-                        90%
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">Machine Learning for Beginners</h3>
-                <p class="text-sm text-gray-500 mt-1">Simplilearn</p>
-                <p class="text-xs text-gray-600 mt-3 flex-1">
-                    Introduction to ML types, algorithms, and real-world applications.
-                </p>
-                <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMjU4IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODIxNTI2NV84NTQ0MzA2MTc0NTA1NzA3OTc0My5wbmciLCJ1c2VybmFtZSI6Ik1EIEthd3NhciBNYWhtdWQifQ%3D%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F6046%2FMachine%2520Learning%2520for%2520Beginners%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1461931439596421021&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1kFVTwx28at0NvFLDkuyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUA FKjPNz8AAAA%3D" 
-                   target="_blank" 
-                   class="mt-4 inline-flex items-center text-blue-600 font-medium hover:text-blue-800 text-sm">
-                    <i class="fas fa-external-link-alt mr-1"></i> View Certificate
-                </a>
-            </div>
-
-            <!-- Competitive Programming Event -->
-            <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-                        hover:shadow-xl hover:border-green-500 hover:scale-[1.02] 
-                        transition-all duration-300 flex flex-col">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-2 bg-green-100 rounded-lg">
-                        <i class="fas fa-trophy text-green-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full">
-                        Award
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">CP Success Story & CS Careers</h3>
-                <p class="text-sm text-gray-500 mt-1">Keynote by Prof. Dr. Muhammad Kaykobad</p>
-                <p class="text-xs text-gray-600 mt-3 flex-1">
-                    Solved 2 live IQ challenges • Won <strong>200 BDT</strong> prize
-                </p>
-                <div class="mt-4 text-xs text-gray-500 italic">
-                    Feni University • 2023
-                </div>
-            </div>
-
-            <!-- Seminar 1 -->
-            <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-                        hover:shadow-xl hover:border-indigo-500 hover:scale-[1.02] 
-                        transition-all duration-300 flex flex-col">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-2 bg-indigo-100 rounded-lg">
-                        <i class="fas fa-chalkboard-teacher text-indigo-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold rounded-full">
-                        Seminar
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">NLP + Data Visualization</h3>
-                <p class="text-sm text-gray-500 mt-1">Dr. Enamul Hoque Prince</p>
-                <p class="text-xs text-gray-600 mt-3 flex-1">
-                    Explored natural language interfaces for interactive data exploration.
-                </p>
-            </div>
-
-            <!-- Seminar 2 -->
-            <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-                        hover:shadow-xl hover:border-purple-500 hover:scale-[1.02] 
-                        transition-all duration-300 flex flex-col">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-2 bg-purple-100 rounded-lg">
-                        <i class="fas fa-microchip text-purple-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold rounded-full">
-                        Seminar
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">AI & ML Architecture</h3>
-                <p class="text-sm text-gray-500 mt-1">Dr. M. Moshiul Hoque</p>
-                <p class="text-xs text-gray-600 mt-3 flex-1">
-                    Deep dive into model design, scalability, and future AI systems.
-                </p>
-            </div>
-
-            <!-- Seminar 3 -->
-            <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-                        hover:shadow-xl hover:border-orange-500 hover:scale-[1.02] 
-                        transition-all duration-300 flex flex-col">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-2 bg-orange-100 rounded-lg">
-                        <i class="fas fa-route text-orange-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold rounded-full">
-                        Seminar
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">CS Careers in AI & Robotics</h3>
-                <p class="text-sm text-gray-500 mt-1">Mohammad Mahdee Uz Zaman</p>
-                <p class="text-xs text-gray-600 mt-3 flex-1">
-                    Global opportunities, roadmaps, and industry trends.
-                </p>
-            </div>
-
-            <!-- Seminar 4 -->
-            <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 
-                        hover:shadow-xl hover:border-cyan-500 hover:scale-[1.02] 
-                        transition-all duration-300 flex flex-col">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="p-2 bg-cyan-100 rounded-lg">
-                        <i class="fas fa-atom text-cyan-600 text-xl"></i>
-                    </div>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold rounded-full">
-                        Seminar
-                    </span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-800">Quantum Computing Career</h3>
-                <p class="text-sm text-gray-500 mt-1">Mujtaba Sattar Anonto</p>
-                <p class="text-xs text-gray-600 mt-3 flex-1">
-                    Quantum programming, algorithms, and industry applications.
-                </p>
-            </div>
-
-        </div>
+      <!-- CodeChef Platform -->
+      <p style="display: inline-flex; align-items: center; width: 100%; gap: 6px;">
+        <strong class="accent">CodeChef</strong> — 
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codechef.svg" alt="CodeChef Logo" style="width: 18px; height: 18px;" />
+      </p>
+      <div class="section-body">
+        <ul>
+          <li><strong>Stats:</strong> 250+ Problems Solved | Max Rating: <strong>1472</strong> (2 Stars)</li>
+          <li><strong>Content:</strong> Solutions focused on Starters challenges and foundational data structure application.</li>
+          <li>
+            <strong>Links:</strong> 
+            <a href="https://www.codechef.com/users/kawsar_12" target="_blank" rel="noopener noreferrer">Profile</a> &nbsp; |
+            <a href="https://github.com/KMsojib/Competitive-Programming/tree/main/CodeChef" target="_blank" rel="noopener noreferrer">Repository</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</section>
 
-    <!-- Skills -->
-    <section id="skills" class="py-16 px-4 md:py-24">
-        <div class="container mx-auto">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="relative z-10 text-3xl font-bold section-title text-gray-900 px-6 py-2">Technical Skills</h2>
-                <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow-sm text-center card">
-                        <i class="fas fa-code text-blue-500 text-3xl mb-2"></i>
-                        <h3 class="font-semibold text-lg">Programming & Languages</h3>
-                        <p class="text-sm text-gray-600 mt-1">C, C++, Python</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm text-center card">
-                        <i class="fas fa-brain text-green-500 text-3xl mb-2"></i>
-                        <h3 class="font-semibold text-lg">Libraries & Frameworks</h3>
-                        <p class="text-sm text-gray-600 mt-1">NumPy, Pandas, TensorFlow</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm text-center card">
-                        <i class="fas fa-database text-purple-500 text-3xl mb-2"></i>
-                        <h3 class="font-semibold text-lg">Database Management</h3>
-                        <p class="text-sm text-gray-600 mt-1">MySQL</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm text-center card">
-                        <i class="fas fa-git-alt text-orange-500 text-3xl mb-2"></i>
-                        <h3 class="font-semibold text-lg">Version Control & Tools</h3>
-                        <p class="text-sm text-gray-600 mt-1">Git, GitHub, VsCode, CodeBlocks</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- Resume Section -->
-<section id="resume" class="py-20 px-4 bg-gray-50 scroll-mt-24">
-    <div class="container mx-auto">
-
-        <!-- Section Title -->
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
-                My Resume
-            </h2>
-            <p class="mt-3 text-gray-600">
-                Download or preview my latest CV
-            </p>
+        <!-- ===================== ACHIEVEMENTS ===================== -->
+        <div class="post-content" id="Achievements">
+          <h2>Achievements</h2>
+          <div class="section-body">
+            <ul>
+              <li>
+                <strong class="accent">Champion</strong>, Independence Day Intra Programming Contest 2024,
+                Feni University (Rank 1/12).
+              </li>
+              <li>
+                <strong class="accent">CPC Asia Dhaka Regional Programming Contest 2024</strong>,
+                Ranked <strong class="accent">188/309</strong> teams (Team: FU_Convex_Hull).
+              </li>
+              <li>
+               <strong class="accent">ICPC Asia Dhaka Regional Programming Contest 2023</strong>,
+                Ranked <strong class="accent">91/225</strong> teams (Team: FU_TLE_Eliminators).
+              </li>
+              <li>
+                <strong class="accent">CUET Inter-University Programming Contest (CodeStorm 1.0) 2024</strong>,
+                Ranked <strong class="accent">36/100</strong> teams (Top 36%).
+              </li>
+              <li>
+               <strong class="accent">Premier University(PU) Inter-University Programming Contest 2024</strong>,
+                Ranked <strong class="accent">14/70</strong> teams.
+              </li>
+              <li>
+                <strong class="accent">CoU–BRACNet Inter-University Programming Contest 2023</strong>,
+                Ranked <strong class="accent">49/72</strong> teams.
+              </li>
+              <li>
+               <strong class="accent">UIU Inter-University Programming Contest 2025</strong>,
+                Ranked <strong class="accent">144</strong> among participating teams.
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Resume Card -->
-        <div class="max-w-2xl mx-auto">
-            <div class="group bg-white p-8 rounded-2xl shadow-lg border border-gray-200
-                        hover:shadow-2xl hover:border-blue-500 hover:scale-[1.02]
-                        transition-all duration-300">
-
-                <!-- PDF Preview -->
-                <div class="relative mb-6 bg-gray-100 border-2 border-dashed border-gray-300
-                            rounded-xl h-72 overflow-hidden">
-
-                    <iframe
-                        src="https://drive.google.com/file/d/1L3DheLnbPMmAXzJezB1BFq5SglScosq8/preview"
-                        class="w-full h-full border-0"
-                        allow="autoplay"
-                        loading="lazy">
-                    </iframe>
-
-                    <!-- Overlay -->
-                    <div class="absolute inset-0 bg-black bg-opacity-0
-                                group-hover:bg-opacity-10 transition-all duration-300">
-                    </div>
-                </div>
-
-                <!-- Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-
-                    <!-- Download -->
-                    <a href="https://drive.google.com/uc?export=download&id=1L3DheLnbPMmAXzJezB1BFq5SglScosq8"
-                       target="_blank"
-                       class="inline-flex items-center justify-center px-6 py-3
-                              bg-gradient-to-r from-blue-600 to-indigo-600 text-white
-                              font-semibold rounded-full shadow-md
-                              hover:from-blue-700 hover:to-indigo-700
-                              transform hover:-translate-y-1 transition-all duration-200">
-                        <i class="fas fa-download mr-2"></i>
-                        Download PDF
-                    </a>
-
-                    <!-- View -->
-                    <a href="https://drive.google.com/file/d/1L3DheLnbPMmAXzJezB1BFq5SglScosq8/view"
-                       target="_blank"
-                       class="inline-flex items-center justify-center px-6 py-3
-                              bg-white text-blue-600 border-2 border-blue-600
-                              font-semibold rounded-full shadow-md
-                              hover:bg-blue-50 transform hover:-translate-y-1
-                              transition-all duration-200">
-                        <i class="fas fa-external-link-alt mr-2"></i>
-                        View Online
-                    </a>
-
-                </div>
-
-                <!-- Stats -->
-                <div class="mt-8 pt-6 border-t border-gray-200 grid grid-cols-3 gap-4 text-center text-sm text-gray-600">
-                    <div>
-                        <p class="font-bold text-gray-800">2 Pages</p>
-                        <p class="text-xs">Professional</p>
-                    </div>
-                    <div>
-                        <p class="font-bold text-gray-800">Updated</p>
-                        <p class="text-xs">Jul 2026</p>
-                    </div>
-                    <div>
-                        <p class="font-bold text-gray-800">ATS</p>
-                        <p class="text-xs">Friendly</p>
-                    </div>
-                </div>
-
-            </div>
+        <!-- ===================== EXTRACURRICULAR ACTIVITIES ===================== -->
+        <div class="post-content" id="Extracurricular activities">
+          <h2>Extracurricular Activities</h2>
+          
+          <div class="section-body">
+            <ul>
+              <li>
+                <strong class="accent">Lead Instructor</strong>, Competitive Programming Club (Feni University, 2024 – 2025)
+                <br><span style="font-size: 0.95em; color: var(--text-color-secondary);">Mentored students in DSA & competitive programming fundamentals; organized internal mock contests.</span>
+              </li>
+              <li style="margin-top: 12px;">
+                <strong class="accent">Joint Secretary</strong>, CAFU (Feni University, 2025)
+                <br><span style="font-size: 0.95em; color: var(--text-color-secondary);">Coordinated departmental tech workshops, hackathons, and community engagement events.</span>
+              </li>
+              <li style="margin-top: 12px;">
+                <strong class="accent">Champion</strong>, Winter CSE Feast Cricket Tournament (Sports Club, 2023)
+                <br><span style="font-size: 0.95em; color: var(--text-color-secondary);">Led the department team to victory; active member of the university sports club since 2022.</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
-    </div>
-</section>
+        <!-- ===================== CERTIFICATIONS & PROFESSIONAL TRAINING ===================== -->
+        <div class="post-content" id="certifications">
+          <h2>Certifications & Professional Training</h2>
+          
+          <p><strong class="accent">-&gt; Verified Certifications:</strong></p>
+          <div class="section-body">
+            <ul>
+              <li>
+               <strong class="accent">Supervised ML: Regression & Classification</strong> — Coursera (Andrew Ng) &nbsp;&middot;&nbsp; 
+                <a href="https://www.coursera.org/account/accomplishments/certificate/4HKLY6OOZT47" target="_blank" rel="noopener noreferrer">View Certificate</a>
+              </li>
+              <li style="margin-top: 8px;">
+                <strong class="accent">Advanced Learning Algorithms</strong> — Coursera (DeepLearning.AI) &nbsp;&middot;&nbsp; 
+                <a href="https://www.coursera.org/account/accomplishments/certificate/FB8TSE1V2AKI" target="_blank" rel="noopener noreferrer">View Certificate</a>
+              </li>
+              <li style="margin-top: 8px;">
+                <strong class="accent">Machine Learning for Beginners</strong> — Simplilearn &nbsp;&middot;&nbsp; 
+                <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMjU4IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODIxNTI2NV84NTQ0MzA2MTc0NTA1NzA3OTc0My5wbmciLCJ1c2VybmFtZSI6Ik1EIEthd3NhciBNYWhtdWQifQ%3D%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F6046%2FMachine%2520Learning%2520for%2520Beginners%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1461931439596421021&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1kFVTwx28at0NvFLDkuyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUA FKjPNz8AAAA%3D" target="_blank" rel="noopener noreferrer">View Certificate</a>
+              </li>
+            </ul>
+          </div>
 
+         <p style="margin-top: 20px;"><strong class="accent">-&gt; Seminars & Workshops:</strong></p>
+          <div class="section-body">
+            <ul>
+              <li>
+                <strong class="accent">CP Success Story & CS Careers</strong> — Prof. Dr. Muhammad Kaykobad &nbsp;&middot;&nbsp; Feni University &nbsp;&middot;&nbsp; 2023.
+              </li>
+              <li style="margin-top: 6px;">
+                <strong class="accent">NLP + Data Visualization</strong> — Dr. Enamul Hoque Prince &nbsp;&middot;&nbsp; Feni University
+              </li>
+              <li style="margin-top: 6px;">
+                <strong class="accent">AI & ML Architecture</strong> — Dr. M. Moshiul Hoque &nbsp;&middot;&nbsp; Feni University
+              </li>
+              <li style="margin-top: 6px;">
+                <strong class="accent">CS Careers in AI & Robotics</strong> — Mohammad Mahdee Uz Zaman &nbsp;&middot;&nbsp;Feni University.
+              </li>
+              <li style="margin-top: 6px;">
+                <strong class="accent">Quantum Computing Career</strong> — Mujtaba Sattar Anonto &nbsp;&middot;&nbsp; Feni University
+              </li>
+            </ul>
+          </div>
 
-<!-- Footer with Feedback Form -->
-<footer class="bg-gray-900 text-white py-16">
-    <div class="container mx-auto px-4 text-center">
-        <!-- Title -->
-        <h2 class="text-3xl font-bold section-title text-white mb-8">Connect With Me</h2>
+        <!-- ===================== TECHNICAL SKILLS ===================== -->
+        <div class="post-content" id="skills">
+          <h2>Technical Skills</h2>
+          <div class="section-body">
+            <ul>
+              <li><strong>Languages & Databases:</strong> Python, C, C++, MySQL</li>
+              <li style="margin-top: 6px;"><strong>AI & Computer Vision:</strong> Machine Learning, Computer Vision, NumPy, PyTorch, TensorFlow, Roboflow</li>
+              <li style="margin-top: 6px;"><strong>Tools & Applications:</strong> Git, GitHub, VS Code, CodeBlocks, Office Applications</li>
+            </ul>
+          </div>
+        </div>
 
-        <!-- Social Icons -->
-        <div class="mt-12 flex justify-center space-x-8">
-            <a href="https://github.com/KMsojib" target="_blank"
-               class="text-gray-400 hover:text-white transform hover:scale-125 transition-all duration-300">
-                <i class="fab fa-github text-3xl"></i>
+        <!-- ===================== RESUME ===================== -->
+        <div class="post-content" id="resume">
+          <h2>Resume</h2>
+          <p style="margin-top: 15px;">
+            <a href="https://drive.google.com/file/d/1L3DheLnbPMmAXzJezB1BFq5SglScosq8/view" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">[ View Online ]</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://drive.google.com/uc?export=download&id=1L3DheLnbPMmAXzJezB1BFq5SglScosq8" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">[ Download PDF ]</a>
+          </p>
+        </div>
+
+        <!-- ===================== VISITOR ANALYTICS ===================== -->
+        <div class="post-content" style="text-align: center; margin-top: 40px; border-top: 1px dashed #eee; padding-top: 30px;">
+          <h3 style="font-size: 1.1em; margin-bottom: 12px; font-weight: 600;">Visitors From Around the World</h3>
+          <div style="display: inline-block;">
+            <a href="https://info.flagcounter.com/UAF0" target="_blank" rel="noopener noreferrer">
+              <img src="https://s01.flagcounter.com/count2/UAF0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_5/maxflags_20/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter" style="border: 0; max-width: 100%; height: auto;" />
             </a>
-            <a href="https://www.linkedin.com/in/md-kawsar-mahmud1/" target="_blank"
-               class="text-gray-400 hover:text-white transform hover:scale-125 transition-all duration-300">
-                <i class="fab fa-linkedin-in text-3xl"></i>
-            </a>
-            <a href="mailto:kawsarmahmud.cse@gmail.com"
-               class="text-gray-400 hover:text-red-400 transform hover:scale-125 transition-all duration-300">
-                <i class="fas fa-envelope text-3xl"></i>
-            </a>
+          </div>
+          <p style="font-size: 0.85em; color: var(--text-color-secondary); margin-top: 8px; margin-bottom: 0;">
+            Total portfolio traffic analytics
+          </p>
         </div>
 
-    <!-- Visitor Counter Section -->
-<div class="mt-16">
-    <h3 class="text-xl font-semibold mb-6 text-teal-300">
-        Visitors From Around the World
-    </h3>
-
-    <div class="flex justify-center">
-        <a href="https://info.flagcounter.com/UAF0">
-            <img 
-                src="https://s01.flagcounter.com/count2/UAF0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_5/maxflags_20/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" 
-                alt="Flag Counter" 
-                border="0"
-            >
-        </a>
+        <!-- ===================== FOOTER ===================== -->
+        <footer class="footer">
+          <div class="footer__inner">
+            <div class="copyright">
+              <span>&copy; 2026 Md Kawsar Mahmud</span>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
 
-    <p class="mt-6 text-sm text-gray-400">
-        Total visitors to this portfolio
-    </p>
-</div>
-
-        <!-- Copyright -->
-        <p class="mt-10 text-sm text-gray-500">
-            © 2025 MD. Kawsar Mahmud. All Rights Reserved.
-        </p>
-    </div>
-</footer>
-
-<!-- Formspree Success Script (Optional - Shows "Thank You") -->
-<script>
-    const form = document.querySelector('form');
-    const successMsg = document.getElementById('success-msg');
-
-    form.addEventListener('submit', function(e) {
-        // Let Formspree handle submission
-        setTimeout(() => {
-            form.reset();
-            successMsg.classList.remove('hidden');
-            setTimeout(() => successMsg.classList.add('hidden'), 5000);
-        }, 1000);
-    });
-</script>
+    <script src="assets/main.js"></script>
+    <script src="assets/site.js"></script>
+  </body>
+</html>
