@@ -7,7 +7,54 @@
     <title>Md-Kawsar Mahmud</title>
     <link rel="shortcut icon" href="images/txst-logo-vertical.png" />
     <link rel="canonical" href="https://kmsojib.io/" />
+    <!-- This links back to your original CSS file so your theme works -->
     <link rel="stylesheet" href="assets/style.css" />
+    
+    <!-- Embedded inline fix for your research project accordions -->
+    <style>
+      details.paper-figure {
+        padding: 16px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+      }
+      details.paper-figure summary {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        list-style: none;
+      }
+      details.paper-figure summary::-webkit-details-marker {
+        display: none;
+      }
+      .project-thesis { background-color: rgba(234, 179, 8, 0.03); border-left: 4px solid #eab308; }
+      .project-med { background-color: rgba(59, 130, 246, 0.03); border-left: 4px solid #3b82f6; }
+      .project-pink { background-color: rgba(236, 72, 153, 0.03); border-left: 4px solid #ec4899; }
+      .project-green { background-color: rgba(34, 197, 94, 0.03); border-left: 4px solid #22c55e; }
+      .project-badge { font-weight: 600; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; display: inline-block; margin-bottom: 6px; }
+      .project-badge-yellow { background-color: rgba(234, 179, 8, 0.15); color: #ca8a04; border: 1px solid rgba(234, 179, 8, 0.3); }
+      .project-badge-blue { background-color: rgba(59, 130, 246, 0.15); color: #2563eb; border: 1px solid rgba(59, 130, 246, 0.3); }
+      .project-badge-pink { background-color: rgba(236, 72, 153, 0.15); color: #db2777; border: 1px solid rgba(236, 72, 153, 0.3); }
+      .project-badge-green { background-color: rgba(34, 197, 94, 0.15); color: #16a34a; border: 1px solid rgba(34, 197, 94, 0.3); }
+      .project-title { display: block; font-size: 1.05em; line-height: 1.4; }
+      .project-thesis .project-title { color: #ca8a04; }
+      .project-med .project-title { color: #2563eb; }
+      .project-pink .project-title { color: #db2777; }
+      .project-green .project-title { color: #16a34a; }
+      .project-details-body { margin-top: 14px; padding-top: 14px; }
+      .project-thesis .project-details-body { border-top: 1px solid rgba(234, 179, 8, 0.2); }
+      .project-med .project-details-body { border-top: 1px solid rgba(59, 130, 246, 0.2); }
+      .project-pink .project-details-body { border-top: 1px solid rgba(236, 72, 153, 0.2); }
+      .project-green .project-details-body { border-top: 1px solid rgba(34, 197, 94, 0.2); }
+      .project-desc { font-size: 0.9em; margin: 0 0 10px 0; line-height: 1.4; }
+      .paper-tags { margin-bottom: 12px; }
+      .paper-tag { padding: 2px 6px; border-radius: 4px; font-size: 0.85em; display: inline-block; margin-right: 4px; margin-bottom: 4px; }
+      .project-thesis .paper-tag { background-color: rgba(234, 179, 8, 0.1); color: #ca8a04; }
+      .project-med .paper-tag { background-color: rgba(59, 130, 246, 0.1); color: #2563eb; }
+      .project-pink .paper-tag { background-color: rgba(236, 72, 153, 0.1); color: #db2777; }
+      .project-green .paper-tag { background-color: rgba(34, 197, 94, 0.1); color: #16a34a; }
+    </style>
+
     <meta property="og:title" content="Md Kawsar Mahmud" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://kmsojib.io/" />
@@ -19,6 +66,7 @@
         <nav class="menu">
           <ul class="menu__inner menu__inner--desktop">
             <li><a href="#about" class="active">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#Experience">Experience</a></li>
             <li><a href="#Research">Research</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -26,11 +74,10 @@
             <li><a href="#Achievements">Achievements</a></li>
             <li><a href="#Extracurricular activities">Extracurriculars</a></li>
             <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <!--<li><a href="#resume">Resume</a></li></-->
           </ul>
           <ul class="menu__inner menu__inner--mobile">
             <li><a href="#about" class="active">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#Experience">Experience</a></li>
             <li><a href="#Research">Research</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -38,8 +85,7 @@
             <li><a href="#Achievements">Achievements</a></li>
             <li><a href="#Extracurricular activities">Extracurriculars</a></li>
             <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <!--<li><a href="#resume">Resume</a></li><!-->
+            
           </ul>
         </nav>
 
@@ -90,233 +136,373 @@
           </figure>
         </div>
 
-
-  <!-- ===================== Experience ===================== -->
-      <div class="post-content" id="Experience">
-        <h2>Experience</h2>
-        <h3 strong class="accent">Research & Teaching Assistant</h3>
-        <p><em>May 2026 – Present</em><br>
-        Department of Computer Science and Engineering, <strong class="accent">Daffodil International University</strong><br>
-        Supervisor: <a href="https://faculty.daffodilvarsity.edu.bd/profile/cse/aburayan.html" target="_blank"> Muhammad Abu Rayan</a></p>
-        <div class="section-body">
-          <ul>
-            <li>Conduct machine learning research involving educational data and student learning analysis.</li>
-            <li>Develop predictive models to analyze student performance and learning trajectories.</li>
-            <li>Perform data preprocessing, model development, experimental evaluation, and literature review.</li>
-          </ul>
-        </div>
-      </div>
-
-
-       <!-- ===================== RESEARCH ===================== -->
-      <div class="post-content" id="Research">
-        <h2>Ongoing Research</h2>
-
-        <!--<p>
-          I am deeply passionate about exploring the intersections of <strong class="accent">deep learning, computer vision, and their real-world impact.</strong> My primary academic curiosity lies in <strong class="accent">medical image reconstruction, image restoration, and building robust, generalizable AI systems for healthcare.</strong> Additionally, I enjoy exploring advanced methodologies like <strong class="accent">Vision Transformers and few-shot learning</strong> to solve data-scarce challenges across different domains.
-        </p> -->
-
-        <h3 class="accent">Prospective Title: Parameter-Efficient Few-Shot Rice Disease Recognition Using Frozen Pretrained Backbones and Self-Collected Field Imagery</h3>
-        <div class="section-body">
-          <ul>
-            <li>Few-Shot Learning for Plant Disease Recognition</li>
-            <li>Transformer-Based Learning</li>
-            <li><strong class="accent">Manuscript in Preparation</strong></li>
-          </ul>
+        <!-- ===================== TECHNICAL SKILLS ===================== -->
+        <div class="post-content" id="skills">
+          <h2>Technical Skills</h2>
+          <div class="section-body">
+            <ul>
+              <li><strong>Programming:</strong> Python, C, C++</li>
+              <li style="margin-top: 6px;"><strong>Libraries & Frameworks:</strong> PyTorch, NumPy,Pandas, scikit-learn</li>
+              <li style="margin-top: 6px;"><strong>Tools:</strong> Git, GitHub, VS Code, CodeBlocks, Office Applications</li>
+              <li style="margin-top: 6px;"><strong>Core Component </strong> ML Algorithms, Deep Learning, Computer Vision, DSA and Algorithms, OOP</li>
+            </ul>
+          </div>
         </div>
 
-        <h3 class="accent">Research in Progress</h3>
-        <div class="section-body">
-          <ul>
-            <li><strong class="accent">Generative Augmentation for Agricultural Vision:</strong> Developing GAN-based augmentation methods to address
-                class imbalance and improve few-shot agricultural image recognition.</li>
-            <li><strong class="accent">Freshwater Fish Species Classification:</strong> Benchmarking YOLO architectures on the FreshWaterFishBD-28
-              dataset for multi-class fish species classification.</li>
-          </ul>
+        <!-- ===================== Experience ===================== -->
+        <div class="post-content" id="Experience">
+          <h2>Experience</h2>
+          <h3 class="accent"><strong>Research & Teaching Assistant</strong></h3>
+          <p><em>May 2026 – Present</em><br>
+          Department of Computer Science and Engineering, <strong class="accent">Daffodil International University</strong><br>
+          Supervisor: <a href="https://faculty.daffodilvarsity.edu.bd/profile/cse/aburayan.html" target="_blank"> Muhammad Abu Rayan</a></p>
+          <div class="section-body">
+            <ul>
+              <li>Conduct machine learning research involving educational data and student learning analysis.</li>
+              <li>Develop predictive models to analyze student performance and learning trajectories.</li>
+              <li>Perform data preprocessing, model development, experimental evaluation, and literature review.</li>
+            </ul>
+          </div>
         </div>
 
-        <h3 class="accent">Current Work & Future Direction</h3>
-        <div class="section-body">
-          <p>
-            Currently, I am working on a research project focused on <strong class="accent">Transformer-based Few-Shot Learning for Agricultural Disease Classification & Detection</strong> to improve model performance under severe data limitations, while my long-term research goal is to transition into <strong class="accent">Medical Imaging</strong> and contribute to AI-driven diagnostic tools and computational healthcare solutions.
-          </p>
+        <!-- ===================== RESEARCH ===================== -->
+        <div class="post-content" id="Research">
+          <h2>Ongoing Research</h2>
+
+          <h3 class="accent">Prospective Title: Parameter-Efficient Few-Shot Rice Disease Recognition Using Frozen Pretrained Backbones and Self-Collected Field Imagery</h3>
+          <div class="section-body">
+            <ul>
+              <li>Few-Shot Learning for Plant Disease Recognition</li>
+              <li>Transformer-Based Learning</li>
+              <li><strong class="accent">Manuscript in Preparation</strong></li>
+            </ul>
+          </div>
+
+          <h3 class="accent">Research in Progress</h3>
+          <div class="section-body">
+            <ul>
+              <li><strong class="accent">Generative Augmentation for Agricultural Vision:</strong> Developing GAN-based augmentation methods to address
+                  class imbalance and improve few-shot agricultural image recognition.</li>
+              <li><strong class="accent">Freshwater Fish Species Classification:</strong> Benchmarking YOLO architectures on the FreshWaterFishBD-28
+                dataset for multi-class fish species classification.</li>
+            </ul>
+          </div>
+
+          <h3 class="accent">Current Work & Future Direction</h3>
+          <div class="section-body">
+            <p>
+              Currently, I am working on a research project focused on <strong class="accent">Transformer-based Few-Shot Learning for Agricultural Disease Classification & Detection</strong> to improve model performance under severe data limitations, while my long-term research goal is to transition into <strong class="accent">Medical Imaging</strong> and contribute to AI-driven diagnostic tools and computational healthcare solutions.
+            </p>
+          </div>
         </div>
 
-       <!-- ===================== RESEARCH PROJECTS ===================== -->
-      <div class="post-content post-content--publications" id="projects">
-        <h2 class="scholar-link">Research Projects</h2>
-      
-       <!-- Project 1: Thesis -->
-      <figure class="paper-figure">
-        <img src="projects/thesis.jpg?v=2" alt="Thesis thumbnail" loading="lazy" />
-        <figcaption>
-          <strong class="accent">Region-Aware Image Reconstruction for Agricultural Vision Using an Attention Residual U-Net</strong>
-          <p class="paper-tags">
-            <span class="paper-tag" style="background-color: rgba(234, 179, 8, 0.15); color: #eab308; border: 1px solid rgba(234, 179, 8, 0.3); font-weight: 600;">In Prep for Submission</span>
-            <span class="paper-tag">Deep Learning &amp; Computer Vision</span>
-            <span class="paper-tag">Image Reconstruction</span>
-            <span class="paper-tag">Degradation Modeling</span>
-          </p>
-          <p style="font-size: 0.9em; margin: 8px 0; color: var(--text-secondary, #020202); line-height: 1.4;">
-            Engineered an encoder-decoder architecture paired with a region-aware, background-only synthetic degradation framework (1,033 profiles across 10 degradation types). Restores corrupted structural features to enhance downstream vision task performance while preserving essential foreground semantics.
-          </p>
-          <!--<a href="https://github.com/KMsojib" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:var(--brand-color);font-weight: 500;">Overview</a> /
-          <a href="https://github.com/KMsojib" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:var(--brand-color);font-weight: 500;">Code</a> /-->
-          <span style="color: var(--text-muted, #71717a); font-size: 0.9em; font-style: italic;">Preprint coming soon</span>
-        </figcaption>
-      </figure>
+    <!-- ===================== RESEARCH PROJECTS LIST (ROW-WISE) ===================== -->
+    <section id="projects">
+      <h2>Research Projects</h2>
+      <div class="projects-list">
+
+        <!-- Project 1: Thesis -->
+        <details class="project-card project-thesis">
+          <summary>
+            <span class="project-badge badge-yellow">In Prep for Submission</span>
+            <div class="project-title">Region-Aware Image Reconstruction for Agricultural Vision Using an Attention Residual U-Net</div>
+            <span class="dropdown-hint">Click to expand ↓</span>
+          </summary>
+          <div class="project-details-body">
+            <p class="project-desc">
+              Engineered an encoder-decoder architecture paired with a region-aware, background-only synthetic degradation framework (1,033 profiles across 10 degradation types). Restores corrupted structural features to enhance downstream vision task performance while preserving essential foreground semantics.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag tag-yellow">Deep Learning &amp; CV</span>
+              <span class="project-tag tag-yellow">Image Reconstruction</span>
+              <span class="project-tag tag-yellow">Degradation Modeling</span>
+            </div>
+            <div class="project-links">
+              <span style="color: var(--text-muted, #71717a); font-style: italic;">Preprint coming soon</span>
+            </div>
+          </div>
+        </details>
 
         <!-- Project 2: MedRecon-ARU -->
-        <figure class="paper-figure">
-          <img src="projects/med-recon.png?v=2" alt="MedRecon thumbnail" loading="lazy" />
-          <figcaption>
-            <strong class="accent">MedRecon-ARU: MRI & CT Image Reconstruction</strong>
-            <p class="paper-tags">
-              <span class="paper-tag">Deep Learning & Computer Vision</span>
-              <span class="paper-tag">Medical Image Reconstruction</span>
+        <details class="project-card project-med">
+          <summary>
+            <span class="project-badge badge-blue">2025</span>
+            <div class="project-title">MedRecon-ARU: MRI & CT Image Reconstruction</div>
+            <span class="dropdown-hint">Click to expand ↓</span>
+          </summary>
+          <div class="project-details-body">
+            <p class="project-desc">
+              Developed advanced medical image reconstruction pipelines using attention residual U-Nets to improve MRI and CT scan clarity.
             </p>
-            <a href="https://github.com/KMsojib/MedRecon-ARU-Attention-Residual-U-Net-for-MRI-CT-Image-Reconstruction/blob/main/README.md" style="text-decoration:none;color:var(--brand-color);" target="_blank" rel="noopener noreferrer">Overview</a> /
-            <a href="https://github.com/KMsojib/MedRecon-ARU-Attention-Residual-U-Net-for-MRI-CT-Image-Reconstruction" style="text-decoration:none;color:var(--brand-color);" target="_blank" rel="noopener noreferrer">Code</a>
-          </figcaption>
-        </figure>
+            <div class="project-tags">
+              <span class="project-tag tag-blue">Deep Learning & CV</span>
+              <span class="project-tag tag-blue">Medical Image Reconstruction</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/KMsojib/MedRecon-ARU-Attention-Residual-U-Net-for-MRI-CT-Image-Reconstruction/blob/main/README.md" target="_blank" rel="noopener noreferrer">↗ overview</a> /
+              <a href="https://github.com/KMsojib/MedRecon-ARU-Attention-Residual-U-Net-for-MRI-CT-Image-Reconstruction" target="_blank" rel="noopener noreferrer">↗ code</a>
+            </div>
+          </div>
+        </details>
 
-        <!-- Project 3: Breast Cancer Prediction -->
-        <figure class="paper-figure">
-          <img src="projects/breast-cancer.png?v=2" alt="Breast Cancer project thumbnail" loading="lazy" />
-          <figcaption>
-            <strong class="accent">Breast Cancer Prediction</strong>
-            <p class="paper-tags">
-              <span class="paper-tag">Machine Learning</span>
-              <span class="paper-tag">Healthcare AI & Classification</span>
+        <!-- Project 3: Breast Cancer Detection -->
+        <details class="project-card project-pink">
+          <summary>
+            <span class="project-badge badge-pink">2025</span>
+            <div class="project-title">Breast Cancer Detection Using YOLOv26</div>
+            <span class="dropdown-hint">Click to expand ↓</span>
+          </summary>
+          <div class="project-details-body">
+            <p class="project-desc">
+              Implemented state-of-the-art YOLOv26 architectures for precise breast cancer detection tasks, focusing on healthcare AI solutions.
             </p>
-            <a href="https://github.com/KMsojib/Hands-On-Machine-Learning-Projects/tree/main/Breast%20Cancer%20Prediction#readme" style="text-decoration:none;color:var(--brand-color);" target="_blank" rel="noopener noreferrer">Overview</a> /
-            <a href="https://github.com/KMsojib/Hands-On-Machine-Learning-Projects/tree/main/Breast%20Cancer%20Prediction" style="text-decoration:none;color:var(--brand-color);" target="_blank" rel="noopener noreferrer">Code</a>
-          </figcaption>
-        </figure>
+            <div class="project-tags">
+              <span class="project-tag tag-pink">Machine Learning</span>
+              <span class="project-tag tag-pink">Healthcare AI & CV</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/KMsojib/Breast-Cancer-Detection-Using-YOLO26/blob/main/README.md" target="_blank" rel="noopener noreferrer">↗ overview</a> /
+              <a href="https://github.com/KMsojib/Breast-Cancer-Detection-Using-YOLO26" target="_blank" rel="noopener noreferrer">↗ code</a>
+            </div>
+          </div>
+        </details>
 
         <!-- Project 4: Rice Leaf Disease Classification -->
-        <figure class="paper-figure">
-          <img src="projects/Rice-leaf.jpg?v=2" alt="Rice Leaf Disease Classification Thumbnail" loading="lazy" />
-          <figcaption>
-            <strong class="accent">Rice Leaf Disease Classification</strong>
-            <p style="margin: 4px 0 8px 0; font-size: 0.88em; opacity: 0.85; line-height: 1.4;">
-              Comparative Benchmarking of YOLOv8n-cls, YOLOv11n-cls, and YOLOv26n-cls on Real-World Bangladeshi Field Images.
+        <details class="project-card project-green">
+          <summary>
+            <span class="project-badge badge-green">2025</span>
+            <div class="project-title">Rice Leaf Disease Classification</div>
+            <span class="dropdown-hint">Click to expand ↓</span>
+          </summary>
+          <div class="project-details-body">
+            <p class="project-desc">
+              Conducted comparative benchmarking of YOLOv8n-cls, YOLOv11n-cls, and YOLOv26n-cls models utilizing real-world Bangladeshi agricultural field images.
             </p>
-            <p class="paper-tags" style="margin-top: 0;">
-              <span class="paper-tag">YOLO Benchmarking</span>
-              <span class="paper-tag">Agricultural Computer Vision</span>
-            </p>
-            <a href="https://github.com/KMsojib/Rice-Leaf-Disease-Classification/blob/main/README.md" style="text-decoration:none;color:var(--brand-color);" target="_blank" rel="noopener noreferrer">Overview</a> /
-            <a href="https://github.com/KMsojib/Rice-Leaf-Disease-Classification" style="text-decoration:none;color:var(--brand-color);" target="_blank" rel="noopener noreferrer">Code</a>
-          </figcaption>
-        </figure>
-      </div>
-<!-- ===================== CP PROFILE ===================== -->
-       <div class="post-content" id="Cp-Profile">
-        <h2>Competitive Programming Profile</h2>
-        <!-- LeetCode Platform -->
-      <p style="display: inline-flex; align-items: center; width: 100%; gap: 6px;">
-        <strong class="accent">LeetCode</strong> — 
-        <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leetcode.svg" alt="LeetCode Logo" style="width: 18px; height: 18px;" />
-      </p>
-      <div class="section-body">
-        <ul>
-          <li><strong>Stats:</strong> 600+ Problems Solved | Max Rating: <strong>1603</strong> (Top 23%)</li>
-          <li><strong>Content:</strong> Clean C++ and Python solutions categorized systematically by topic.</li>
-          <li>
-            <strong>Links:</strong> 
-            <a href="https://leetcode.com/u/Bay_maxxxx/" target="_blank" rel="noopener noreferrer">Profile</a> &nbsp;|
-            <a href="https://github.com/KMsojib/LeetCode" target="_blank" rel="noopener noreferrer">Repository</a>
-          </li>
-        </ul>
-      </div>
+            <div class="project-tags">
+              <span class="project-tag tag-green">YOLO Benchmarking</span>
+              <span class="project-tag tag-green">Agricultural Computer Vision</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/KMsojib/Rice-Leaf-Disease-Classification/blob/main/README.md" target="_blank" rel="noopener noreferrer">↗ overview</a> /
+              <a href="https://github.com/KMsojib/Rice-Leaf-Disease-Classification" target="_blank" rel="noopener noreferrer">↗ code</a>
+            </div>
+          </div>
+        </details>
 
-      <!-- Codeforces Platform -->
-      <p style="display: inline-flex; align-items: center; width: 100%; gap: 6px;">
-        <strong class="accent">Codeforces</strong> — 
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codeforces.svg" alt="Codeforces Logo" style="width: 18px; height: 18px;" />
-      </p>
-      <div class="section-body">
-        <ul>
-          <li><strong>Stats:</strong> 500+ Problems Solved | Max Rating: <strong>1198</strong> (Newbie)</li>
-          <li><strong>Content:</strong> Actively competed in over 100 contests solving diverse mathematical and algorithmic challenges.</li>
-          <li>
-            <strong>Links:</strong> 
-            <a href="https://codeforces.com/profile/Hiro-Hamada" target="_blank" rel="noopener noreferrer">Profile</a> &nbsp; |
-            <a href="https://github.com/KMsojib/Competitive-Programming/tree/main/Codeforces" target="_blank" rel="noopener noreferrer">Repository</a>
-          </li>
-        </ul>
       </div>
+    </section>
 
-      <!-- CodeChef Platform -->
-      <p style="display: inline-flex; align-items: center; width: 100%; gap: 6px;">
-        <strong class="accent">CodeChef</strong> — 
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codechef.svg" alt="CodeChef Logo" style="width: 18px; height: 18px;" />
-      </p>
-      <div class="section-body">
-        <ul>
-          <li><strong>Stats:</strong> 250+ Problems Solved | Max Rating: <strong>1472</strong> (2 Stars)</li>
-          <li><strong>Content:</strong> Solutions focused on Starters challenges and foundational data structure application.</li>
-          <li>
-            <strong>Links:</strong> 
-            <a href="https://www.codechef.com/users/kawsar_12" target="_blank" rel="noopener noreferrer">Profile</a> &nbsp; |
-            <a href="https://github.com/KMsojib/Competitive-Programming/tree/main/CodeChef" target="_blank" rel="noopener noreferrer">Repository</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <style>
+      /* Stacked Full-Width List Layout */
+      .projects-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      details.project-card {
+        background: var(--card-bg, #f9fafb);
+        border: 1px solid var(--border-color, #e5e7eb);
+        border-radius: 12px;
+        padding: 1.5rem;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      details.project-card summary {
+        list-style: none;
+      }
+
+      details.project-card summary::-webkit-details-marker {
+        display: none;
+      }
+
+      /* Left accent border colors */
+      .project-thesis { border-left: 5px solid #f59e0b; }
+      .project-med { border-left: 5px solid #3b82f6; }
+      .project-pink { border-left: 5px solid #db2777; }
+      .project-green { border-left: 5px solid #16a34a; }
+
+      .project-badge {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 0.2rem 0.6rem;
+        border-radius: 6px;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+
+      .badge-yellow { background: rgba(245, 158, 11, 0.12); color: #d97706; }
+      .badge-blue { background: rgba(59, 130, 246, 0.12); color: #2563eb; }
+      .badge-pink { background: rgba(219, 39, 119, 0.12); color: #db2777; }
+      .badge-green { background: rgba(22, 163, 74, 0.12); color: #16a34a; }
+
+      /* Increased Title Font Size */
+      .project-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--text-color, #111827);
+        margin-bottom: 0.35rem;
+        line-height: 1.4;
+      }
+
+      /* Increased Dropdown Hint Size */
+      .dropdown-hint {
+        font-size: 0.85rem;
+        color: var(--text-muted, #94a3b8);
+        display: inline-block;
+        margin-top: 0.35rem;
+      }
+
+      /* Divider line that appears when opened */
+      details.project-card[open] summary {
+        border-bottom: 1px solid var(--border-color, #e5e7eb);
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Increased Description and Body Font Size */
+      .project-details-body {
+        font-size: 1rem;
+        color: var(--text-muted, #4b5563);
+      }
+
+      .project-desc {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+
+      .project-tags {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+
+      /* Increased Tag Font Size */
+      .project-tag {
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+      }
+
+      .tag-yellow { background: rgba(245, 158, 11, 0.08); color: #b45309; }
+      .tag-blue { background: rgba(59, 130, 246, 0.08); color: #1d4ed8; }
+      .tag-pink { background: rgba(219, 39, 119, 0.08); color: #be185d; }
+      .tag-green { background: rgba(22, 163, 74, 0.08); color: #15803d; }
+
+      .project-links {
+        font-size: 0.95rem;
+        font-weight: 500;
+        border-top: 1px solid var(--border-color, #e5e7eb);
+        padding-top: 1rem;
+      }
+    </style>
+        <!-- ===================== CP PROFILE ===================== -->
+        <div class="post-content" id="Cp-Profile">
+          <h2>Competitive Programming Profile</h2>
+          <p style="display: inline-flex; align-items: center; width: 100%; gap: 6px;">
+            <strong class="accent">LeetCode</strong> — 
+            <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leetcode.svg" alt="LeetCode Logo" style="width: 18px; height: 18px;" />
+          </p>
+          <div class="section-body">
+            <ul>
+              <li><strong>Stats:</strong> 600+ Problems Solved | Max Rating: <strong>1603</strong> (Top 23%)</li>
+              <li><strong>Content:</strong> Clean C++ and Python solutions categorized systematically by topic.</li>
+              <li>
+                <strong>Links:</strong> 
+                <a href="https://leetcode.com/u/Bay_maxxxx/" target="_blank" rel="noopener noreferrer">Profile</a> &nbsp;|
+                <a href="https://github.com/KMsojib/LeetCode" target="_blank" rel="noopener noreferrer">Repository</a>
+              </li>
+            </ul>
+          </div>
+
+          <p style="display: inline-flex; align-items: center; width: 100%; gap: 6px;">
+            <strong class="accent">Codeforces</strong> — 
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codeforces.svg" alt="Codeforces Logo" style="width: 18px; height: 18px;" />
+          </p>
+          <div class="section-body">
+            <ul>
+              <li><strong>Stats:</strong> 500+ Problems Solved | Max Rating: <strong>1198</strong> (Newbie)</li>
+              <li><strong>Content:</strong> Actively competed in over 100 contests solving diverse mathematical and algorithmic challenges.</li>
+              <li>
+                <strong>Links:</strong> 
+                <a href="https://codeforces.com/profile/Hiro-Hamada" target="_blank" rel="noopener noreferrer">Profile</a> &nbsp; |
+                <a href="https://github.com/KMsojib/Competitive-Programming/tree/main/Codeforces" target="_blank" rel="noopener noreferrer">Repository</a>
+              </li>
+            </ul>
+          </div>
+
+          <p style="display: inline-flex; align-items: center; width: 100%; gap: 6px;">
+            <strong class="accent">CodeChef</strong> — 
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codechef.svg" alt="CodeChef Logo" style="width: 18px; height: 18px;" />
+          </p>
+          <div class="section-body">
+            <ul>
+              <li><strong>Stats:</strong> 250+ Problems Solved | Max Rating: <strong>1472</strong> (2 Stars)</li>
+              <li><strong>Content:</strong> Solutions focused on Starters challenges and foundational data structure application.</li>
+              <li>
+                <strong>Links:</strong> 
+                <a href="https://www.codechef.com/users/kawsar_12" target="_blank" rel="noopener noreferrer">Profile</a> &nbsp; |
+                <a href="https://github.com/KMsojib/Competitive-Programming/tree/main/CodeChef" target="_blank" rel="noopener noreferrer">Repository</a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
         <!-- ===================== ACHIEVEMENTS ===================== -->
-    <div class="post-content" id="Achievements">
-      <h2>Achievement & Awards</h2>
-      <div class="section-body">
-        <ul>
-          <li>
-            <strong class="accent">1st Prize Poster Presentation(CAFU-App Design)</strong>, 
-            Awarded during Software Engineering Coursework showcase organized by CSE Dept. 
-          </li>
-          <li>
-            <strong class="accent">Champion</strong>, Independence Day IPC-2024,
-            Feni University<strong class="accent"> (Rank 1/12)</strong> 
-            — <a href="https://drive.google.com/file/d/1GKFIfiSs5SFAm0J9-5AsXlzf9kIjYCu2/view" target="_blank" class="accent">Standing</a>
-          </li>
-          <li>
-            <strong class="accent">ICPC Asia Dhaka Regional Programming Contest 2024</strong>,
-            Ranked <strong class="accent">188/309</strong> teams (Team: FU_Convex_Hull) 
-            — <a href="https://bapsoj.org/contests/icpc-asia-dhaka-regional-contest-2024-onsite-round/standings" target="_blank" class="accent">Standing</a>
-          </li>
-          <li>
-            <strong class="accent">ICPC Asia Dhaka Regional Programming Contest 2023</strong>,
-            Ranked <strong class="accent">91/225</strong> teams (Team: FU_TLE_Eliminators) 
-            — <a href="https://bapsoj.org/contests/icpc-dhaka-regional-site-2023/standings" target="_blank" class="accent">Standing</a>
-          </li>
-          <li>
-            <strong class="accent">CUET Inter-University Programming Contest (CodeStorm 1.0) 2024</strong>,
-            Ranked <strong class="accent">36/100</strong> teams (Top 36%) 
-            — <a href="https://toph.co/c/cuet-inter-university-codestorm-1-0/standings" target="_blank" class="accent">Standing</a>
-          </li>
-          <li>
-            <strong class="accent">Premier University(PU) Inter-University Programming Contest 2024</strong>,
-            Ranked <strong class="accent">14/70</strong> teams 
-          </li>
-          <li>
-            <strong class="accent">CoU–BRACNet Inter-University Programming Contest 2023</strong>,
-            Ranked <strong class="accent">49/72</strong> teams 
-            — <a href="https://toph.co/c/cou-bracnet-inter-university-2023/standings" target="_blank" class="accent">Standing</a>
-          </li>
-          <li>
-            <strong class="accent">UIU Inter-University Programming Contest 2025</strong>,
-            Ranked <strong class="accent">144</strong> among participating teams 
-            — <a href="https://bapsoj.org/contests/uiu-inter-university-programming-contest-2025/standings" target="_blank" class="accent">Standing</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+        <div class="post-content" id="Achievements">
+          <h2>Achievement & Awards</h2>
+          <div class="section-body">
+            <ul>
+              <li>
+                <strong class="accent">1st Prize Poster Presentation(CAFU-App Design)</strong>, 
+                Awarded during Software Engineering Coursework showcase organized by CSE Dept. 
+              </li>
+              <li>
+                <strong class="accent">Champion</strong>, Independence Day IPC-2024,
+                Feni University<strong class="accent"> (Rank 1/12)</strong> 
+                — <a href="https://drive.google.com/file/d/1GKFIfiSs5SFAm0J9-5AsXlzf9kIjYCu2/view" target="_blank" class="accent">Standing</a>
+              </li>
+              <li>
+                <strong class="accent">ICPC Asia Dhaka Regional Programming Contest 2024</strong>,
+                Ranked <strong class="accent">188/309</strong> teams (Team: FU_Convex_Hull) 
+                — <a href="https://bapsoj.org/contests/icpc-asia-dhaka-regional-contest-2024-onsite-round/standings" target="_blank" class="accent">Standing</a>
+              </li>
+              <li>
+                <strong class="accent">ICPC Asia Dhaka Regional Programming Contest 2023</strong>,
+                Ranked <strong class="accent">91/225</strong> teams (Team: FU_TLE_Eliminators) 
+                — <a href="https://bapsoj.org/contests/icpc-dhaka-regional-site-2023/standings" target="_blank" class="accent">Standing</a>
+              </li>
+              <li>
+                <strong class="accent">CUET Inter-University Programming Contest (CodeStorm 1.0) 2024</strong>,
+                Ranked <strong class="accent">36/100</strong> teams (Top 36%) 
+                — <a href="https://toph.co/c/cuet-inter-university-codestorm-1-0/standings" target="_blank" class="accent">Standing</a>
+              </li>
+              <li>
+                <strong class="accent">Premier University(PU) Inter-University Programming Contest 2024</strong>,
+                Ranked <strong class="accent">14/70</strong> teams 
+              </li>
+              <li>
+                <strong class="accent">CoU–BRACNet Inter-University Programming Contest 2023</strong>,
+                Ranked <strong class="accent">49/72</strong> teams 
+                — <a href="https://toph.co/c/cou-bracnet-inter-university-2023/standings" target="_blank" class="accent">Standing</a>
+              </li>
+              <li>
+                <strong class="accent">UIU Inter-University Programming Contest 2025</strong>,
+                Ranked <strong class="accent">144</strong> among participating teams 
+                — <a href="https://bapsoj.org/contests/uiu-inter-university-programming-contest-2025/standings" target="_blank" class="accent">Standing</a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
         <!-- ===================== EXTRACURRICULAR ACTIVITIES ===================== -->
         <div class="post-content" id="Extracurricular activities">
           <h2>Extracurricular Activities</h2>
-          
           <div class="section-body">
             <ul>
               <li>
@@ -338,7 +524,6 @@
         <!-- ===================== CERTIFICATIONS & PROFESSIONAL TRAINING ===================== -->
         <div class="post-content" id="certifications">
           <h2>Certifications & Professional Training</h2>
-          
           <p><strong class="accent">Verified Certifications:</strong></p>
           <div class="section-body">
             <ul>
@@ -354,108 +539,72 @@
                 <strong class="accent">Machine Learning for Beginners</strong> — Simplilearn &nbsp;&middot;&nbsp; 
                 <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMjU4IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODIxNTI2NV84NTQ0MzA2MTc0NTA1NzA3OTc0My5wbmciLCJ1c2VybmFtZSI6Ik1EIEthd3NhciBNYWhtdWQifQ%3D%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F6046%2FMachine%2520Learning%2520for%2520Beginners%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1461931439596421021&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1kFVTwx28at0NvFLDkuyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUA FKjPNz8AAAA%3D" target="_blank" rel="noopener noreferrer">View Certificate</a>
               </li>
+                            <li>
+                <strong class="accent">Python Essentials 1</strong> — Cisco Networking Academy &nbsp;&middot;&nbsp;
+                <a href="https://drive.google.com/file/d/1JMe3IxW_ApF0dKr7gwsj-xE2dkbAe5WW/view?usp=drive_link" target="_blank" rel="noopener noreferrer">View Certificate</a>
+              </li>
+              <li>
+                <strong class="accent">Python Essentials 2</strong> — Cisco Networking Academy &nbsp;&middot;&nbsp;
+                <a href="https://drive.google.com/file/d/1HZ1q34IJiJp132xGND-kyxqZQ11NwLgE/view?usp=drive_link" target="_blank" rel="noopener noreferrer">View Certificate</a>
+              </li>
             </ul>
           </div>
 
           <p><strong class="accent">Seminars & Workshops:</strong></p>
-        <div class="section-body">
-          
-          <details class="seminar-item" style="margin-bottom: 12px; cursor: pointer;">
-            <summary style="font-weight: 600;">
-              <strong class="accent">Competitive Programming Success Story & CS Careers</strong> (2023)
-            </summary>
-            <div style="padding: 8px 0 8px 15px; font-size: 0.9em; border-left: 2px solid var(--accent-color, #007acc);">
-              <p style="margin: 0 0 4px 0;"><strong>Keynote:</strong> Prof. Dr. Muhammad Kaykobad (BRAC University)</p>
-              <p style="margin: 0; color: #666;">Solved two live IQ challenges during the session and won a performance prize.</p>
-            </div>
-          </details>
-
-          <details class="seminar-item" style="margin-bottom: 12px; cursor: pointer;">
-            <summary style="font-weight: 600;">
-              <strong class="accent">Natural Language Interactions with Data Visualization</strong>
-            </summary>
-            <div style="padding: 8px 0 8px 15px; font-size: 0.9em; border-left: 2px solid var(--accent-color, #007acc);">
-              <p style="margin: 0 0 4px 0;"><strong>Keynote:</strong> Dr. Enamul Hoque Prince (York University, Canada)</p>
-              <p style="margin: 0; color: #666;">Explored the integration of NLP algorithms and interactive data visualizations for human-centered analytics.</p>
-            </div>
-          </details>
-
-          <details class="seminar-item" style="margin-bottom: 12px; cursor: pointer;">
-            <summary style="font-weight: 600;">
-              <strong class="accent">Designing Tomorrow: The Architecture of AI & Machine Learning</strong>
-            </summary>
-            <div style="padding: 8px 0 8px 15px; font-size: 0.9em; border-left: 2px solid var(--accent-color, #007acc);">
-              <p style="margin: 0 0 4px 0;"><strong>Keynote:</strong> Dr. M. Moshiul Hoque (CUET)</p>
-              <p style="margin: 0; color: #666;">Gained valuable perspectives on foundational mathematical concepts and emerging future architectural trends in AI & ML.</p>
-            </div>
-          </details>
-
-          <details class="seminar-item" style="margin-bottom: 12px; cursor: pointer;">
-            <summary style="font-weight: 600;">
-              <strong class="accent">Future Pathway to CS Careers in AI, ML, Robotics & Cybersecurity</strong>
-            </summary>
-            <div style="padding: 8px 0 8px 15px; font-size: 0.9em; border-left: 2px solid var(--accent-color, #007acc);">
-              <p style="margin: 0 0 4px 0;"><strong>Keynote:</strong> Mohammad Mahdee Uz Zaman (AWS Solutions Architect Leader)</p>
-              <p style="margin: 0; color: #666;">Obtained insights into global career roadmaps, cloud systems, and industry opportunities within emerging technologies.</p>
-            </div>
-          </details>
-
-          <details class="seminar-item" style="margin-bottom: 12px; cursor: pointer;">
-            <summary style="font-weight: 600;">
-              <strong class="accent">Next Generation End-to-End Career in Quantum Computing</strong>
-            </summary>
-            <div style="padding: 8px 0 8px 15px; font-size: 0.9em; border-left: 2px solid var(--accent-color, #007acc);">
-              <p style="margin: 0 0 4px 0;"><strong>Keynote:</strong> Mujtaba Sattar Anonto (IBM Certified Developer, BQCCC Founder)</p>
-              <p style="margin: 0; color: #666;">Introduced to fundamental quantum programming principles, frameworks, and long-term career pathways.</p>
-            </div>
-          </details>
-
-        </div>
-        </div>
-
-        <!-- ===================== TECHNICAL SKILLS ===================== -->
-        <div class="post-content" id="skills">
-          <h2>Technical Skills</h2>
           <div class="section-body">
-            <ul>
-              <li><strong>Languages & Databases:</strong> Python, C, C++, MySQL</li>
-              <li style="margin-top: 6px;"><strong>AI & Computer Vision:</strong> Machine Learning, Computer Vision, NumPy, PyTorch, TensorFlow, Roboflow</li>
-              <li style="margin-top: 6px;"><strong>Tools & Applications:</strong> Git, GitHub, VS Code, CodeBlocks, Office Applications</li>
-            </ul>
+            <details class="seminar-item" style="margin-bottom: 12px; cursor: pointer;">
+              <summary style="font-weight: 600;">
+                <strong class="accent">Competitive Programming Success Story & CS Careers</strong> (2023)
+              </summary>
+              <div style="padding: 8px 0 8px 15px; font-size: 0.9em; border-left: 2px solid var(--accent-color, #007acc);">
+                <p style="margin: 0 0 4px 0;"><strong>Keynote:</strong> Prof. Dr. Muhammad Kaykobad (BRAC University)</p>
+                <p style="margin: 0; color: #666;">Solved two live IQ challenges during the session and won a performance prize.</p>
+              </div>
+            </details>
+
+            <details class="seminar-item" style="margin-bottom: 12px; cursor: pointer;">
+              <summary style="font-weight: 600;">
+                <strong class="accent">Natural Language Interactions with Data Visualization</strong>
+              </summary>
+              <div style="padding: 8px 0 8px 15px; font-size: 0.9em; border-left: 2px solid var(--accent-color, #007acc);">
+                <p style="margin: 0 0 4px 0;"><strong>Keynote:</strong> Dr. Enamul Hoque Prince (York University, Canada)</p>
+                <p style="margin: 0; color: #666;">Explored the integration of NLP algorithms and interactive data visualizations for human-centered analytics.</p>
+              </div>
+            </details>
+
+            <details class="seminar-item" style="margin-bottom: 12px; cursor: pointer;">
+              <summary style="font-weight: 600;">
+                <strong class="accent">Designing Tomorrow: The Architecture of AI & Machine Learning</strong>
+              </summary>
+              <div style="padding: 8px 0 8px 15px; font-size: 0.9em; border-left: 2px solid var(--accent-color, #007acc);">
+                <p style="margin: 0 0 4px 0;"><strong>Keynote:</strong> Dr. M. Moshiul Hoque (CUET)</p>
+                <p style="margin: 0; color: #666;">Gained valuable perspectives on foundational mathematical concepts and emerging future architectural trends in AI & ML.</p>
+              </div>
+            </details>
+
+            <details class="seminar-item" style="margin-bottom: 12px; cursor: pointer;">
+              <summary style="font-weight: 600;">
+                <strong class="accent">Future Pathway to CS Careers in AI, ML, Robotics & Cybersecurity</strong>
+              </summary>
+              <div style="padding: 8px 0 8px 15px; font-size: 0.9em; border-left: 2px solid var(--accent-color, #007acc);">
+                <p style="margin: 0 0 4px 0;"><strong>Keynote:</strong> Mohammad Mahdee Uz Zaman (AWS Solutions Architect Leader)</p>
+                <p style="margin: 0; color: #666;">Obtained insights into global career roadmaps, cloud systems, and industry opportunities within emerging technologies.</p>
+              </div>
+            </details>
+
+            <details class="seminar-item" style="margin-bottom: 12px; cursor: pointer;">
+              <summary style="font-weight: 600;">
+                <strong class="accent">Next Generation End-to-End Career in Quantum Computing</strong>
+              </summary>
+              <div style="padding: 8px 0 8px 15px; font-size: 0.9em; border-left: 2px solid var(--accent-color, #007acc);">
+                <p style="margin: 0 0 4px 0;"><strong>Keynote:</strong> Mujtaba Sattar Anonto (IBM Certified Developer, BQCCC Founder)</p>
+                <p style="margin: 0; color: #666;">Introduced to fundamental quantum programming principles, frameworks, and long-term career pathways.</p>
+              </div>
+            </details>
           </div>
         </div>
 
-     <!-- ===================== RESUME ===================== 
-    <div class="post-content" id="resume">
-      <h2>Resume</h2>
-
-      <div class="resume-container">
-
-      <!-- Left: Resume Preview 
-        <div class="resume-preview">
-          <iframe
-            src="https://drive.google.com/file/d/1iXcaNbABTdEVyHY5wFBVaH3JofImI2AO/preview"
-            title="Resume Preview"
-            allow="autoplay">
-          </iframe>
-        </div>
-
-         Right: Download 
-        <div class="resume-download">
-          <a
-            href="https://drive.google.com/uc?export=download&id=1iXcaNbABTdEVyHY5wFBVaH3JofImI2AO"
-            class="resume-download-btn"
-            download
-          >
-            Download PDF
-          </a>
-        </div>
-
-      </div>
-    </div>
-         <!-- Visitor Counter Section -->
-
-      <div class="mt-16">
+        <div class="mt-16">
           <h3 class="text-xl font-semibold mb-6 text-teal-300">
               Visitors From Around the World
           </h3>
@@ -467,8 +616,9 @@
                       border="0">
               </a>
           </div>
-      </div>
-    <!-- ===================== FOOTER ===================== -->
+        </div>
+
+        <!-- ===================== FOOTER ===================== -->
         <footer class="footer">
           <div class="footer__inner">
             <div class="copyright">
